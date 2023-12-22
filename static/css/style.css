@@ -1,0 +1,150 @@
+main{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+footer{
+    margin-top: auto !important;
+    flex-grow:1
+}
+
+.title-text {
+    font-family: 'Gideon Roman';
+    color: black;
+}
+
+.title-text > a {
+    text-decoration: none;
+
+}
+
+.nav-button {
+    font-size: 150%;
+}
+.nav-button:hover{
+    color: white;
+    background-color: black;
+}
+
+i{
+    color: black;
+    font-size: 100%;
+}
+
+.order{
+    height: 400px;
+    width: 100%;
+}
+
+.main{
+    background: url('../image/ocean-book-glass-vehicle-sunglass-bag-105434.jpg') no-repeat center;
+    background-image: cover;
+    height: 700px;
+}
+
+main{
+    height: 800px;
+}
+
+.index-text{
+    margin-top: 550px;
+    margin-left: 650px;
+    font-family: 'Gideon Roman';
+    color: black;
+    background-color: white;
+}
+
+.index-text:hover{
+    color: white;
+    background-color: black;
+}
+
+.dropdown-filter{
+    display: none;
+}
+
+.show{
+    display: block;
+}
+.social-media-text {
+    color: black;
+}
+
+.social-media-icon {
+    text-align: center;
+}
+
+.social-media-icon>li {
+    display: inline;
+    padding: 10%;
+    padding-top: 20px;
+    font-size: 200%;
+}
+
+.submit-button{
+    margin-left: 720px;
+    margin-top: 100px;
+    
+    height: 100%;
+    
+}
+
+.login-button{
+    
+    margin-top: 100px;
+}
+
+.login-form{
+    margin-left: 500px;
+}
+
+.signup-form{
+    margin-left: 1000px;
+    margin-top: 100px;
+}
+
+@media only screen and (max-width: 900px){
+    .index-text{
+        margin-left:auto;
+        margin-right: auto;
+        margin-top: 550px;
+        font-family: 'Gideon Roman';
+        color: black;
+        background-color: white;
+    }
+
+    .submit-button{
+        margin-left: 250px;
+        margin-top: 100px;
+        
+        
+    }
+    .signup-button{
+        margin-right: 100px;
+        margin-top: 10px;
+    }
+    .login-button{
+        margin-left: 150px;
+        margin-top: 100px;
+    }
+
+    .login-form{
+        margin-left: 100px;
+    }
+
+    .signup-form{
+        margin-left: 200px;
+        margin-top: 100px;
+    }
+}
+
+@media only screen and (max-width: 600px)  {
+    .social-media-icon>li {
+        display: block;
+        padding: clear;
+        font-size: 200%;
+    } 
+
+    
+}
