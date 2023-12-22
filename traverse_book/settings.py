@@ -41,6 +41,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
+    'home',
+    'crispy_bootstrap4',
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -56,10 +59,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'traverse_book.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
