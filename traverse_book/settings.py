@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'cloudinary',
     'home',
     'product',
+    'order',
     'crispy_bootstrap4',
     'crispy_forms',
 ]
@@ -173,6 +174,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_URL = '/media/'
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
+DELIVERY_PERCENTAGE = 5
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
