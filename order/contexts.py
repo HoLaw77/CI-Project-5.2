@@ -10,7 +10,7 @@ def order_contents(request):
     overall_total = 0
     bag = request.session.get('bag', {})
     # item = request.session.get('item', {})
-    # images = ProductImage.objects.all()
+    images = ProductImage.objects.all()
 
     for books_id, order_data in bag.items():
         print("books_id, order_data", books_id, order_data)
@@ -47,7 +47,7 @@ def order_contents(request):
         "item_items": bag_items,
         "total": total,
         "product_count": product_count,
-        # "images": images,
+        "images": images,
         "overall_total": overall_total,
     }
     print("!!!!!!!!!!!!context", context)
