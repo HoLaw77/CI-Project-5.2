@@ -16,10 +16,13 @@ def show_order(request):
 def add_order(request, books_id):
     """Add individual book to cart"""
     # books_id = request.POST.get('books_id')
-    print("books_id", books_id)
+    # print("books_id", books_id)
     product = get_object_or_404(Product, id=books_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
+    
+    if books_id in list(bag.keys()):
+        bag[books_id] += quantity
     print(bag)
     item_items = bag.get('item_items')
     print('item_items', item_items)
