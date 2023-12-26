@@ -8,6 +8,7 @@ def order_contents(request):
     total = 0
     product_count = 0
     overall_total = 0
+    delivery = 0
     bag = request.session.get('bag', {})
     # item = request.session.get('item', {})
     images = ProductImage.objects.all()
@@ -17,10 +18,10 @@ def order_contents(request):
         if isinstance(order_data, int):
             product = get_object_or_404(Product, pk=books_id)
             print("product", product)
-            total += order_data * product.price
+            total = order_data * product.price
             product_count += order_data
             existing_item = next((item for item in bag_items if item['product'].id == int(books_id)), None)
-            print('existing_item',existing_item)
+            print('existing_item', existing_item)
             if existing_item:
                 print("Yes")
                 # If the product is found, update its quantity
@@ -32,7 +33,7 @@ def order_contents(request):
                 print('no')
                 # Otherwise, add a new entry
                 total += order_data * product.price
-                product_count += order_data
+                product_count = order_data
                 bag_items.append({
                     'books_id': books_id,
                     'quantity': order_data,
@@ -49,6 +50,7 @@ def order_contents(request):
         "product_count": product_count,
         "images": images,
         "overall_total": overall_total,
+        "delivery": delivery
     }
     print("!!!!!!!!!!!!context", context)
 
