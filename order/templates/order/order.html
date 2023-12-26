@@ -14,8 +14,6 @@
     <div class="row">
         <div class="col-lg-12">
             {% if item_items %}
-
-
             {% for item in item_items %}
             {% if item.quantity > 1 %}
             {% for image in images %}
@@ -173,11 +171,8 @@
                                         <p>
                                             <strong>
 
-                                                Product Price: $ {{total | floatformat:2}}
-                                                <small>
-
-                                                    (5% delivery cost included)
-                                                </small>
+                                                Product Price: $ {{ total | floatformat:2}}
+                                                
                                             </strong>
                                         </p>
 
@@ -189,6 +184,9 @@
                                                 Delivery Charge: $ {{delivery | floatformat:2}}
                                                 
                                             </strong>
+                                            <small>
+                                                Quantity: {{product_count}}
+                                            </small>
                                         </p>
 
                                     </div>
