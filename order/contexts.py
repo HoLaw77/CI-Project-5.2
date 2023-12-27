@@ -45,7 +45,7 @@ def order_contents(request):
                     
                 })
 
-        delivery = total * Decimal(settings.DELIVERY_PERCENTAGE / 100)
+        delivery = total * Decimal(settings.DELIVERY_PERCENTAGE/100)
         overall_total = total + delivery
 
     context = {

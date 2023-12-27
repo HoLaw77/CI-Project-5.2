@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-
+{% load order_calculator %}
 {% block content %}
 
 <div class="container col-lg-6">
@@ -156,11 +156,13 @@
 
 
                                     {% endfor %}
-
+                                    
+                                    
+                                    
                                     <form action="{% url 'remove_all' %}" method="POST" class=""
                                         style="max-width: 540px;">
                                         {% csrf_token %}
-
+                                        
                                         <button type="submit" class="remove-books">
                                             <h5 class="title-text text-danger">
                                                 Remove all Book
@@ -205,10 +207,10 @@
                                     </div>
 
                                     <a href="{% url 'book' %}">
-
+                                        
                                         <button class="bg-dark col-lg-4 mt-5 mb-5 center">
                                             <p class="text-white">
-
+                                                
                                                 Keep shopping
                                             </p>
                                         </button>
@@ -217,20 +219,20 @@
                                             <button class="bg-warning col-lg-4 mt-5 mb-5 center">
                                                 <p class="text-dark">
                                                     <strong>
-
+                                                        
                                                         Checkout
                                                     </strong>
                                                 </p>
                                             </button>
                                         </a>
-
+                                        
                                     </a>
                                     {% else %}
                                     <h3 class="title-text text-center">Your cart is empty</h3>
                                     <a href="{% url 'book' %}" class="ml-5">
                                         <button class="bg-dark col-lg-4 center">
                                             <p class="text-white">
-
+                                                
                                                 Keep shopping
                                             </p>
                                         </button>
@@ -239,9 +241,10 @@
                                 </div>
 
                             </div>
-                        </div>
+                                        
+                        </div>             
                         {% endblock %}
-
+                        
                         {% block postloadjs %}
                         {{ block.super }}
                         <script type="text/javascript">
