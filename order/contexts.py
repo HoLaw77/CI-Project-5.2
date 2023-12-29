@@ -21,7 +21,7 @@ def order_contents(request):
             print("product", product)
             print("price", product.price)
             print("quantity", order_data)
-            total = order_data * product.price
+            total += order_data * product.price
             print("total", total)
             product_count += order_data
             existing_item = next((item for item in bag_items if item['product'].id == int(books_id)), None)
