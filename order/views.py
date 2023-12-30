@@ -37,7 +37,7 @@ def add_order(request, books_id):
     print("list(bag.keys())", list(bag.keys()))
 
     # if not str(books_id) in list(bag.keys()):
-    bag[books_id] = quantity
+    # bag[books_id] = quantity
     #     print("Yes it is in the bag")
     #     bag[str(books_id)]+= quantity
     #     print("bag", bag)
