@@ -10,7 +10,7 @@ def show_order(request):
 
     # return render (request, 'order/order.html', products)
     bag = request.session.get('bag', {})
-
+    print("bag", bag)
     return render (request, 'order/order.html', bag)
 
 def add_order(request, books_id):

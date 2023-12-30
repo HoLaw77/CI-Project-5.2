@@ -147,7 +147,15 @@
                                 Year of Publication: {{book.year_of_publication}}
                             </p>
                         </div>
+                        
+                        {% if book.category %}
+                        <div class="card-body">
 
+                            <p class="title-text">
+                                Genre: {{book.category.get_genre_display}}
+                            </p>
+                        </div>
+                        {% endif %}
                         <div class="card-body font-weight-bold">
                             <p class="title-text">
                                 <strong>
