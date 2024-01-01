@@ -33,10 +33,16 @@ def order_contents(request):
                 for item in bag_items:
                     if item['product'].id == int(books_id):
                         item['quantity'] += order_data
+                bag_items.append({
+                    'books_id': books_id,
+                    'quantity': order_data,
+                    'product': product,
+                    'total': total,
+                })
             else:
                 print('no')
                 # Otherwise, add a new entry
-                total = order_data * product.price
+                new_total = order_data * product.price
                 print("new total", total)
                 product_count = order_data
                 print("product_count", product_count)
@@ -44,7 +50,7 @@ def order_contents(request):
                     'books_id': books_id,
                     'quantity': order_data,
                     'product': product,
-                    
+                    'total': total,
                 })
 
         delivery = total * settings.DELIVERY_PERCENTAGE/100
