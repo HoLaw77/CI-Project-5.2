@@ -68,13 +68,14 @@ def adjust_order(request, item_id):
     print("line62")
     bag = request.session['bag']
     print("Line 63!!!!bag",bag)
+    print("item_id", item_id)
     if request.method == "POST":
         if quantity > 0:
             bag[item_id] = quantity
             # messages.success(request, f'Adjusted {product.name} quantity')
             return render (request, 'order/order.html')
         else: 
-            item.pop(item_id)
+            bag.pop(item_id)
         request.session['bag'] = bag
     return redirect(reverse('show_order'))
 
@@ -83,10 +84,10 @@ def remove_order(request, item_id):
     """Remove individual product from the cart"""
     product = get_object_or_404(Product, id=item_id)
 
-    request.session['bag'] = {}
+    request.session['bag'] = bag
     # item = request.session.get('item', {})
     # item
-    # item.pop(item_id)
+    # bag.pop(item_id)
     # messages.success(request, f'Removed {product.name} from your cart')
 
     # request.session['item'] = item
