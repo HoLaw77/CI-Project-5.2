@@ -51,6 +51,7 @@ def order_contents(request):
                     'quantity': order_data,
                     'product': product,
                     'total': total,
+                    'new_total': new_total
                 })
 
         delivery = total * settings.DELIVERY_PERCENTAGE/100
