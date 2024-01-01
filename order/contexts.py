@@ -36,11 +36,11 @@ def order_contents(request):
             else:
                 print('no')
                 # Otherwise, add a new entry
-                total += order_data * product.price
+                total = order_data * product.price
                 print("new total", total)
                 product_count = order_data
                 print("product_count", product_count)
-        bag_items.append({
+                bag_items.append({
                     'books_id': books_id,
                     'quantity': order_data,
                     'product': product,
