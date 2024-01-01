@@ -14,6 +14,9 @@
     <div class="row">
         <div class="col-lg-12">
             {% if item_items %}
+
+            <p>{{item_items}}</p>
+            <p>{{request.session.bag}}</p>
             {% for item in item_items %}
             {% if item.quantity > 1 %}
             {% for image in images %}
