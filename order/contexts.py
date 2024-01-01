@@ -9,7 +9,7 @@ def order_contents(request):
     product_count = 0
     overall_total = 0
     delivery = 0
-    
+    new_total= 0    
     bag = request.session.get('bag', {})
     # item = request.session.get('item', {})
     images = ProductImage.objects.all()
@@ -29,7 +29,7 @@ def order_contents(request):
             if existing_item:
                 print("Yes")
                 # If the product is found, update its quantity
-                existing_item['quantity'] += order_data
+                existing_item['quantity'] = order_data
                 for item in bag_items:
                     if item['product'].id == int(books_id):
                         item['quantity'] += order_data
@@ -42,8 +42,8 @@ def order_contents(request):
             else:
                 print('no')
                 # Otherwise, add a new entry
-                new_total = order_data * product.price
-                print("new total", total)
+                new_total += order_data * product.price
+                print("new total", new_total)
                 product_count = order_data
                 print("product_count", product_count)
                 bag_items.append({
