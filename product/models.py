@@ -22,6 +22,21 @@ class Language(models.Model):
 
 class Category(models.Model):
     """model to store cateogy of books"""
+    GENRE_CHOICE = (
+        (1, 'Romance fiction'),
+        (2, 'Thriller fiction'),
+        (3, 'Detective fiction'),
+        (4, 'Classic'),
+        (5, 'Nonfiction'),
+        (6, 'Sci-fi/Fantasy'),
+        (7, 'Poetry'),
+        (8, 'Science'),
+        (9, 'Social Science'),
+        (10, 'Philosophy'),
+        (11, 'Gender'),
+        (12, 'Translated Fiction'),
+        (13, 'Literary Fiction'),
+    )
     
     REGION_CHOICE = (
         (1, 'United States'),
@@ -34,7 +49,7 @@ class Category(models.Model):
         (8, 'China'),
     ) 
 
-    genre = models.CharField(max_length=100)
+    genre = models.IntegerField(choices=GENRE_CHOICE, default=1)
     region = models.IntegerField(choices=REGION_CHOICE, default=1)
     
     
