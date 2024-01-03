@@ -14,6 +14,7 @@ def show_book(request):
     images = ProductImage.objects.all()
     sort = None
     direction = None
+    genres = None
     
     if request.GET:   
         if 'sort' in request.GET:
