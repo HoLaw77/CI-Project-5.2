@@ -64,6 +64,7 @@ def add_order(request, books_id):
 def adjust_order(request, item_id):
     """Adjust quantity for individual book to cart"""
     
+    product = get_object_or_404(Product, id=item_id)
     quantity = int(request.POST.get('quantity'))
     print("line62")
     bag = request.session['bag']
