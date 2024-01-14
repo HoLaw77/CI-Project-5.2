@@ -18,46 +18,49 @@ def order_contents(request):
         print("books_id, order_data", books_id, order_data)
         if isinstance(order_data, int):
             product = get_object_or_404(Product, pk=books_id)
-            print("product", product)
-            print("price", product.price)
-            print("quantity", order_data)
+            #print("product", product)
+            #print("price", product.price)
+            #print("quantity", order_data)
             total += order_data * product.price
-            print("total", total)
+            #print("total", total)
             product_count += order_data
             existing_item = next((item for item in bag_items if item['product'].id == int(books_id)), None)
-            print('existing_item', existing_item)
+            #print('existing_item', existing_item)
             if existing_item:
-                print("Yes")
+                print("existing_item is True")
                 # If the product is found, update its quantity
                 existing_item['quantity'] = order_data
                 for item in bag_items:
+                    print(f'item {item}')
                     if item['product'].id == int(books_id):
                         item['quantity'] += order_data
                 bag_items.append({
-                    'books_id': books_id,
+                    'books_id': int(books_id),
                     'quantity': order_data,
                     'product': product,
                     'total': total,
                 })
+                print(f'appending {books_id} with quantity {order_data} (in if clause)')
             else:
-                print('no')
+                #print('no')
                 # Otherwise, add a new entry
                 new_total += order_data * product.price
-                print("new total", new_total)
+                #print("new total", new_total)
                 product_count = order_data
-                print("product_count", product_count)
+                #print("product_count", product_count)
                 bag_items.append({
-                    'books_id': books_id,
+                    'books_id': int(books_id),
                     'quantity': order_data,
                     'product': product,
                     'total': total,
                     'new_total': new_total
                 })
+                print(f'appending {books_id} with quantity {order_data} (in else clause)')
 
         delivery = total * settings.DELIVERY_PERCENTAGE/100
-        print("delivery", delivery)
+        #print("delivery", delivery)
         overall_total = total + delivery
-        print("overall_total", overall_total)
+        #print("overall_total", overall_total)
     context = {
         "item_items": bag_items,
         "total": total,
