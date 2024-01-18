@@ -23,9 +23,9 @@ def add_order(request, books_id):
     bag = request.session.get('bag', {})
     
     if books_id in list(bag.keys()):
-        bag[books_id] += quantity
+        bag[int(books_id)] += quantity
     else:
-        bag[books_id] = quantity
+        bag[int(books_id)] = quantity
     print(bag)
     item_items = bag.get('item_items')
     print('item_items', item_items)
