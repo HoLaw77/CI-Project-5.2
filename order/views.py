@@ -57,6 +57,7 @@ def adjust_order(request, item_id):
 
 def remove_order(request, item_id):
     """Remove individual product from the cart"""
+    
     product = get_object_or_404(Product, id=item_id)
 
     request.session['bag'] = {}
