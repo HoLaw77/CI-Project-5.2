@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.shortcuts import HttpResponse, get_object_or_404
 from product.models import Product, ProductImage
-
+from django.contrib import messages
 
 # Create your views here.
 def show_order(request):
@@ -19,8 +19,10 @@ def add_order(request, books_id):
     
     if books_id in list(bag.keys()):
         bag[int(books_id)] += quantity
+        messages.success(request, f'Added {product.name} quantity to your bag')
     else:
         bag[int(books_id)] = quantity
+        messages.success(request, f'Added {product.name} quantity to your bag')
     item_items = bag.get('item_items')
     request.session['bag'] = bag
     
@@ -45,9 +47,10 @@ def adjust_order(request, item_id):
     if request.method == "POST":
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
+            messages.success(request, f'Adjusted {product.name} quantity to {quantity}')
         else:
             bag[item_id] = quantity
-            # messages.success(request, f'Adjusted {product.name} quantity')
+            messages.success(request, f'Adjusted {product.name} quantity')
             return render (request, 'order/order.html')
     else: 
         bag.pop(item_id)
@@ -63,7 +66,7 @@ def remove_order(request, item_id):
     request.session['bag'] = {}
     # item = request.session.get('item', {})
     # item.pop(item_id)
-    # messages.success(request, f'Removed {product.name} from your cart')
+    messages.success(request, f'Removed {product.name} from your cart')
 
     # request.session['item'] = item
     return HttpResponse(status=200)
@@ -75,5 +78,6 @@ def remove_all(request):
     bag.clear()
     request.session.modified = True
     request.session['bag'] = bag
+    messages.success(request, f'Removed all books from your cart')
 
     return render (request, 'order/order.html')
