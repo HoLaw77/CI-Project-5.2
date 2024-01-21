@@ -90,6 +90,11 @@ main{
     
 }
 
+.message-container{
+    margin-left: 600px;
+    z-index: 999999999;
+}
+
 .login-button{
     
     margin-top: 100px;
@@ -138,6 +143,8 @@ main{
         margin-top: 100px;
     }
 }
+
+    
 
 @media only screen and (max-width: 600px)  {
     .social-media-icon>li {
