@@ -16,7 +16,7 @@ def cache_checkout_data(request):
         payintentid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
         stripe.PaymentIntent.modify(payintentid, metadata={
-            'item': json.dumps(request.session.get('item', {})),
+            'bag': json.dumps(request.session.get('bag', {})),
             'save-info': request.POST.get('save_info'),
             'username': request.user,
         })
@@ -30,7 +30,7 @@ def checkout(request):
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
     if request.method == "POST":
-        item = request.session.get('item', {})
+        bag = request.session.get('bag', {})
         form_data = {
         "full_name": request.POST["full_name"],  
         "email": request.POST["email"], 
@@ -72,6 +72,8 @@ def checkout(request):
         if not bag:
             messages.error(request, "No book in your cart now.")
             return redirect(reverse('book'))
+
+            
         order_in_cart = order_contents(request)
         total = order_in_cart['overall_total']
         stripe_total = round(total * 100) 
@@ -85,14 +87,15 @@ def checkout(request):
         
         confirm_order = ConfirmOrder()
 
-    # if not stripe_public_key:
-    #     messages.warning(request, 'You forget to set your stripe public key.')
+    if not stripe_public_key:
+        messages.warning(request, 'You forget to set your stripe public key.')
+
 
     template = "checkout/checkout.html"
     context = {
         "confirm_order": confirm_order,
         "stripe_public_key": stripe_public_key,
-        "client_secret": intent.client_secret,
+        "client_secret": "intent.client_secret",
     }
 
     return render (request, template, context)
