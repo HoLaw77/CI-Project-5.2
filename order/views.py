@@ -5,19 +5,14 @@ from product.models import Product, ProductImage
 
 # Create your views here.
 def show_order(request):
-    # products = Products.objects.all()
-    # print('request', request)
-
-    # return render (request, 'order/order.html', products)
+    """View for order page"""
     bag = request.session.get('bag', {})
-    print("bag", bag)
+    
     return render (request, 'order/order.html', bag)
 
 def add_order(request, books_id):
-    print(f'type of books_id in add_order view : {type(books_id)}')
+    
     """Add individual book to cart"""
-    # books_id = request.POST.get('books_id')
-    # print("books_id", books_id)
     product = get_object_or_404(Product, id=books_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
@@ -26,33 +21,9 @@ def add_order(request, books_id):
         bag[int(books_id)] += quantity
     else:
         bag[int(books_id)] = quantity
-    print(bag)
     item_items = bag.get('item_items')
-    print('item_items', item_items)
-    print('product: ', product)
-    print("quantity: ", quantity)
-    # print("bag: ", bag['item_items'])
-    print("!!!!!!!!!")
-    print(bag)
-    print(bag)
-    print("list(bag.keys())", list(bag.keys()))
-
-    # if not str(books_id) in list(bag.keys()):
-    # bag[books_id] = quantity
-    #     print("Yes it is in the bag")
-    #     bag[str(books_id)]+= quantity
-    #     print("bag", bag)
-
-    #     # messages.success(request, f'Added {product.name} to cart')
-    # else: 
-    #     print("Nooooo")
     request.session['bag'] = bag
     
-    print(bag)
-    
-    
-    request.session['bag'] = bag
-    print(request.session['bag'])
 
     # return render (request, "order/order.html")
     context = {
@@ -63,28 +34,25 @@ def add_order(request, books_id):
 
 
 def adjust_order(request, item_id):
-    print(f'type of item_id in adjust_order view : {type(item_id)}')
-    """Adjust quantity for individual book to cart"""
-    
+    """
+    Adjust book quantity
+    """
+    item_id = str(item_id)
     product = get_object_or_404(Product, id=item_id)
     quantity = int(request.POST.get('quantity'))
-    #print("line62")
+    
     bag = request.session['bag']
-    #print("Line 63!!!!bag",bag)
-    #print("item_id", item_id)
     if request.method == "POST":
         if item_id in list(bag.keys()):
             bag[item_id] += quantity
-            print('item in bag - changing quantity')
         else:
             bag[item_id] = quantity
-            print('item not in bag - creating new item')
             # messages.success(request, f'Adjusted {product.name} quantity')
             return render (request, 'order/order.html')
     else: 
         bag.pop(item_id)
     request.session['bag'] = bag
-    return redirect(reverse('show_order'))
+    return redirect(reverse('order'))
 
 
 def remove_order(request, item_id):
@@ -101,10 +69,8 @@ def remove_order(request, item_id):
 
 
 def remove_all(request):
-    print("enter remove all")
     # request.session['bag'] = bag
     bag = request.session.get('bag', {})
-    print('!!!!REMOVE ALL BAG', bag)
     bag.clear()
     request.session.modified = True
     request.session['bag'] = bag

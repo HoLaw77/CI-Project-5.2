@@ -11,21 +11,18 @@ def order_contents(request):
     delivery = 0
     new_total= 0    
     bag = request.session.get('bag', {})
-    # item = request.session.get('item', {})
+
     images = ProductImage.objects.all()
 
     for books_id, order_data in bag.items():
         print("books_id, order_data", books_id, order_data)
         if isinstance(order_data, int):
             product = get_object_or_404(Product, pk=int(books_id))
-            #print("product", product)
-            #print("price", product.price)
-            #print("quantity", order_data)
             total += order_data * product.price
-            #print("total", total)
+            
             product_count += order_data
             existing_item = next((item for item in bag_items if item['product'].id == int(books_id)), None)
-            #print('existing_item', existing_item)
+            
             if existing_item:
                 print("existing_item is True")
                 # If the product is found, update its quantity
@@ -42,12 +39,12 @@ def order_contents(request):
                 })
                 print(f'appending {books_id} with quantity {order_data} (in if clause)')
             else:
-                #print('no')
+                
                 # Otherwise, add a new entry
                 new_total += order_data * product.price
-                #print("new total", new_total)
+                
                 product_count = order_data
-                #print("product_count", product_count)
+        
                 bag_items.append({
                     'books_id': int(books_id),
                     'quantity': order_data,
@@ -58,9 +55,9 @@ def order_contents(request):
                 print(f'appending {books_id} with quantity {order_data} (in else clause)')
 
         delivery = total * settings.DELIVERY_PERCENTAGE/100
-        #print("delivery", delivery)
+        
         overall_total = total + delivery
-        #print("overall_total", overall_total)
+        
     context = {
         "item_items": bag_items,
         "total": total,
