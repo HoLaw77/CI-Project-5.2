@@ -25,7 +25,7 @@ def add_order(request, books_id):
     request.session['bag'] = bag
     
 
-    # return render (request, "order/order.html")
+    
     context = {
         'order_items': request.session['bag']
     }
@@ -69,7 +69,7 @@ def remove_order(request, item_id):
 
 
 def remove_all(request):
-    # request.session['bag'] = bag
+    
     bag = request.session.get('bag', {})
     bag.clear()
     request.session.modified = True
