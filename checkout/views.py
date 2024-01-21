@@ -38,7 +38,7 @@ def checkout(request):
         "address1": request.POST["address1"], 
         "address2": request.POST["address2"], 
         "postcode": request.POST["postcode"], 
-        "countries": request.POST["countries"],
+        "countries": request.POST["country"],
         }
 
         confirm_order = ConfirmOrder(form_data)
@@ -63,7 +63,7 @@ def checkout(request):
             return redirect(reverse('checkout_success', 
             args=[order.order_number]))
         else:
-            messages.error("Error with the inforamtion provided, please check the form.")
+            messages.error(request, "Error with the inforamtion provided, please check the form.")
 
             
     else:
@@ -85,8 +85,8 @@ def checkout(request):
         
         confirm_order = ConfirmOrder()
 
-    if not stripe_public_key:
-        messages.warning(request, 'You forget to set your stripe public key.')
+    # if not stripe_public_key:
+    #     messages.warning(request, 'You forget to set your stripe public key.')
 
     template = "checkout/checkout.html"
     context = {
