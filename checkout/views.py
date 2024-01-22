@@ -22,12 +22,14 @@ def cache_checkout_data(request):
         })
         return HttpResponse(status=200)
     except Exception as e:
-        message.error(request, 'Sorry, your order cannot be processed right now. Please try again.')
+        messages.error(request, 'Sorry, your order cannot be processed right now. Please try again.')
         return HttpResponse(content=e, status=404)
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
+
+    intent = None
 
     if request.method == "POST":
         bag = request.session.get('bag', {})
@@ -38,14 +40,14 @@ def checkout(request):
         "address1": request.POST["address1"], 
         "address2": request.POST["address2"], 
         "postcode": request.POST["postcode"], 
-        "countries": request.POST["country"],
+        "country": request.POST["country"],
         }
 
         confirm_order = ConfirmOrder(form_data)
         if confirm_order.is_valid():
             order = confirm_order.save()
             
-            for books_id, order_data in item.items():
+            for books_id, order_data in bag.items():
                 try: 
                     product = Product.objects.get(id=books_id)
                     if isinstance(order_data, int):
@@ -63,6 +65,7 @@ def checkout(request):
             return redirect(reverse('checkout_success', 
             args=[order.order_number]))
         else:
+            
             messages.error(request, "Error with the inforamtion provided, please check the form.")
 
             
@@ -78,24 +81,32 @@ def checkout(request):
         total = order_in_cart['overall_total']
         stripe_total = round(total * 100) 
         stripe.api_key = stripe_secret_key
-        intent = stripe.PaymentIntent.create(
-            amount = stripe_total,
-            currency = settings.STRIPE_CURRENCY,
-        )
+        try:
+            intent = stripe.PaymentIntent.create(
+                amount = stripe_total,
+                currency = settings.STRIPE_CURRENCY,
+            )
 
-        print(intent)
-        
+            print(intent)
+
+        except stripe.error.StripeError as e:
+            
+            messages.error(request, f"Error processing payment: {e}")
+            return redirect(reverse('checkout'))
+
+
+
         confirm_order = ConfirmOrder()
 
-    if not stripe_public_key:
-        messages.warning(request, 'You forget to set your stripe public key.')
+        if not stripe_public_key:
+            messages.warning(request, 'You forget to set your stripe public key.')
 
 
     template = "checkout/checkout.html"
     context = {
         "confirm_order": confirm_order,
         "stripe_public_key": stripe_public_key,
-        "client_secret": "intent.client_secret",
+        "client_secret": intent.client_secret if intent else None,
     }
 
     return render (request, template, context)
