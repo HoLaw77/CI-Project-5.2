@@ -20,7 +20,7 @@ def show_profile(request):
         bookform.save()
 
 
-    template = "customer/profile.html"
+    template = "customer/customer.html"
     context ={
         "form": form,
         "profile": profile,
