@@ -9,8 +9,15 @@ def show_profile(request):
     profile = get_object_or_404(Profile, user=request.user)
     form = ProfileForm(instance=profile)
     order = profile.orders.all()
-    bookinterest = get_object_or_404(BookInterest, profile=profile)
-    bookform = BookInterestForm(instance=bookinterest)
+    try:
+        # Try to get BookInterest for the profile
+        bookinterest = BookInterest.objects.get(profile=profile)
+        bookform = BookInterestForm(instance=bookinterest)
+        
+    except BookInterest.DoesNotExist:
+        # If BookInterest does not exist, create a new one
+        bookinterest = None
+        bookform = BookInterestForm()
 
 
     if request.method == "POST":
