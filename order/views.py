@@ -80,4 +80,4 @@ def remove_all(request):
     request.session['bag'] = bag
     messages.success(request, f'Removed all books from your cart')
 
-    return render (request, 'order/order.html')
+    return redirect (reverse('order'))
