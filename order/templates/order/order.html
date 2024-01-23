@@ -261,6 +261,7 @@
                                 console.log('item_id', itemId)
                                 var url = `/order/remove_order/${itemId}`;
                                 var data = { 'csrfmiddlewaretoken': csrfToken };
+                                
 
                                 $.post(url, data)
                                     .done(function () {
