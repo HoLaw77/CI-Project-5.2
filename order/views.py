@@ -15,10 +15,10 @@ def add_order(request, books_id):
     
     """Add individual book to cart"""
     print("Entering add_order view")
+    books_id = str(books_id)
     product = get_object_or_404(Product, id=books_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
-    books_id = str(books_id)
     print("books_id:", books_id)
     if books_id in list(bag.keys()):
         bag[books_id] += quantity

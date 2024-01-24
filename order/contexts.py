@@ -18,7 +18,7 @@ def order_contents(request):
     for books_id, order_data in bag.items():
         
         if isinstance(order_data, int):
-            product = get_object_or_404(Product, pk=int(books_id))
+            product = get_object_or_404(Product, pk=str(books_id))
             total += order_data * product.price
             books_id = str(books_id)
             
