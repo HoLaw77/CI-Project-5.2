@@ -11,6 +11,7 @@ def order_contents(request):
     delivery = 0
     new_total= 0    
     bag = request.session.get('bag', {})
+    
 
     images = ProductImage.objects.all()
 
@@ -19,9 +20,10 @@ def order_contents(request):
         if isinstance(order_data, int):
             product = get_object_or_404(Product, pk=int(books_id))
             total += order_data * product.price
+            books_id = str(books_id)
             
             product_count += order_data
-            existing_item = next((item for item in bag_items if item['product'].id == int(books_id)), None)
+            existing_item = next((item for item in bag_items if item['product'].id == books_id), None)
             
             if existing_item:
         
@@ -29,10 +31,10 @@ def order_contents(request):
                 existing_item['quantity'] = order_data
                 for item in bag_items:
                     
-                    if item['product'].id == int(books_id):
+                    if item['product'].id == books_id:
                         item['quantity'] += order_data
                 bag_items.append({
-                    'books_id': int(books_id),
+                    'books_id': books_id,
                     'quantity': order_data,
                     'product': product,
                     'total': total,
@@ -46,7 +48,7 @@ def order_contents(request):
                 product_count = order_data
         
                 bag_items.append({
-                    'books_id': int(books_id),
+                    'books_id': books_id,
                     'quantity': order_data,
                     'product': product,
                     'total': total,
