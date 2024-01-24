@@ -260,7 +260,8 @@
 
 
         $.post(url, data)
-            .done(function () {
+            .done(function (response) {
+                console.log(response);
                 location.reload();
             })
             .fail(function (xhr, status, error) {
