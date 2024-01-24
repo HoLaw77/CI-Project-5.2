@@ -49,8 +49,11 @@ def adjust_order(request, item_id):
     bag = request.session['bag']
     if request.method == "POST":
         if item_id in list(bag.keys()):
-            bag[item_id] += quantity
+            bag[item_id] = quantity
             messages.success(request, f'Adjusted {product.name} quantity to {quantity}')
+            if quantity == 0:
+                bag.pop(item_id)
+                messages.success(request, f'Removed {product.name} from cart.')
         else:
             bag[item_id] = quantity
             messages.success(request, f'Adjusted {product.name} quantity')
