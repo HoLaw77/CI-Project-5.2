@@ -68,6 +68,7 @@ def adjust_order(request, item_id):
 def remove_order(request, item_id):
     """Remove individual product from the cart"""
     item_id = str(item_id)
+    
     try:
         print("Entering remove_order view")
         print("Removing item with ID:", item_id)
@@ -75,13 +76,16 @@ def remove_order(request, item_id):
         bag = request.session.get('bag', {})
 
         if item_id in list(bag.keys()):
-            bag.pop(item_id)
+            quantity = 0
+            if quantity == 0:
+                bag.pop(item_id)
+            
             
             messages.success(request, f'Removed {product} from your cart')
             print(f"Removed {product}")
             return JsonResponse({'message': f'Removed {product} from your cart'})
             # return HttpResponse(status=200)
-        request.session['bag'] = bag
+        # request.session['bag'] = bag
     except Http404 as e:
         messages.error(request, f'Error removing item: {e}')
         print(f"Http404 Error: Product not found")
