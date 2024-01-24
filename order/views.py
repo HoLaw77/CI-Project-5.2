@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, reverse
+from django.http import Http404
 from django.shortcuts import HttpResponse, get_object_or_404
 from product.models import Product, ProductImage
 from django.contrib import messages
@@ -60,13 +61,30 @@ def adjust_order(request, item_id):
 
 def remove_order(request, item_id):
     """Remove individual product from the cart"""
-    
-    product = get_object_or_404(Product, id=item_id)
-    bag = request.session.get('bag', {})
-    bag.pop(item_id)
-    messages.success(request, f'Removed {product.name} from your cart')
-    request.session['bag'] = item
-    return HttpResponse(status=200)
+    try:
+        print("Entering remove_order view")
+        print("Removing item with ID:", item_id)
+        product = get_object_or_404(Product, id=item_id)
+        bag = request.session.get('bag', {})
+
+        if str(item_id) in bag:
+            product_id = str(item_id)
+            product = bag[product_id]
+            del bag[product_id]
+            request.session['bag'] = bag
+        
+        messages.success(request, f'Removed {product} from your cart')
+        request.session['bag'] = bag
+        print("Exiting remove_order view successfully")
+        return HttpResponse(status=200)
+    except Http404 as e:
+        messages.error(request, f'Error removing item: {e}')
+        print(f"Http404 Error: Product not found")
+        return HttpResponse(status=404)
+    except Exception as e:
+        messages.error(request, f'Error removing item: {e}')
+        print(f"Error: {e}")
+        return HttpResponse(status=500)
 
 
 def remove_all(request):
