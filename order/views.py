@@ -31,11 +31,11 @@ def add_order(request, books_id):
     
 
     
-    context = {
-        'order_items': request.session['bag']
-    }
+    # context = {
+    #     'order_items': request.session['bag']
+    # }
 
-    return render (request, 'order/order.html', context)
+    return redirect (reverse('order'))
 
 
 def adjust_order(request, item_id):
