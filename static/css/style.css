@@ -9,6 +9,10 @@ footer{
     flex-grow:1
 }
 
+.empty-text {
+    padding-top: 60px;
+    height: 200px;
+}
 .title-text {
     font-family: 'Gideon Roman';
     color: black;
