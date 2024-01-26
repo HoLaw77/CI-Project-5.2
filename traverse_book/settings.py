@@ -10,12 +10,13 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import dj_database_url
 from pathlib import Path
 if os.path.exists("env.py"):
     import env
-# import cloudinary
-# import cloudinary.uploader
-# import cloudinary.api
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -45,9 +46,9 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'cloudinary_storage',
+    'cloudinary',
     'django.contrib.staticfiles',
     'allauth.socialaccount',
-    'cloudinary',
     'django_countries',
     'isbn_field',
     'home',
@@ -126,12 +127,28 @@ WSGI_APPLICATION = 'traverse_book.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+if 'DATABASE_URL'in os.environ:
+    DATABASES = {
+        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
     }
-}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+# DATABASES = {
+#     'default': dj_database_url.parse('postgres://uwuxkqwuqle:nBYDReybZiYN@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/candy_scare_eject_143413')
+# }
 
 
 # Password validation
@@ -170,11 +187,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-# cloudinary.config(
-#     cloud_name=os.environ.get("CLOUDINARY_CLOUD_NAME"),
-#     api_key=os.environ.get("CLOUDINARY_API_KEY"),
-#     api_secret=os.environ.get("CLOUDINARY_API_SECRET"),
-# )
+cloudinary.config(
+    cloud_name=os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    api_key=os.environ.get("CLOUDINARY_API_KEY"),
+    api_secret=os.environ.get("CLOUDINARY_API_SECRET"),
+)
 
 STATIC_URL = '/static/'
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'

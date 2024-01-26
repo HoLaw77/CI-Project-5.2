@@ -2,6 +2,7 @@ asgiref==3.7.2
 bootstrap4==0.1.0
 cloudinary==1.37.0
 crispy-bootstrap4==2023.1
+dj-database-url==0.5.0
 Django==5.0
 django-allauth==0.59.0
 django-bootstrap4==23.2
@@ -9,7 +10,9 @@ django-cloudinary-storage==0.3.0
 django-countries==7.5.1
 django-crispy-forms==2.1
 django-isbn-field==0.5.3
+gunicorn==21.2.0
 oauthlib==3.2.2
+psycopg2==2.9.9
 PyJWT==2.8.0
 python-stdnum==1.19
 python3-openid==3.2.0
