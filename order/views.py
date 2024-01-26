@@ -14,12 +14,12 @@ def show_order(request):
 def add_order(request, books_id):
     
     """Add individual book to cart"""
-    print("Entering add_order view")
+    
     books_id = str(books_id)
     product = get_object_or_404(Product, id=books_id)
     quantity = int(request.POST.get('quantity'))
     bag = request.session.get('bag', {})
-    print("books_id:", books_id)
+    
     if books_id in list(bag.keys()):
         bag[books_id] += quantity
         messages.success(request, f'Added {product.name} quantity {quantity} to your bag')
@@ -70,8 +70,7 @@ def remove_order(request, item_id):
     item_id = str(item_id)
     
     try:
-        print("Entering remove_order view")
-        print("Removing item with ID:", item_id)
+        
         product = get_object_or_404(Product, id=item_id)
         bag = request.session.get('bag', {})
 
@@ -82,17 +81,17 @@ def remove_order(request, item_id):
             
             
             messages.success(request, f'Removed {product} from your cart')
-            print(f"Removed {product}")
+            
             return JsonResponse({'message': f'Removed {product} from your cart'})
             # return HttpResponse(status=200)
         # request.session['bag'] = bag
     except Http404 as e:
         messages.error(request, f'Error removing item: {e}')
-        print(f"Http404 Error: Product not found")
+        
         return HttpResponse(status=404)
     except Exception as e:
         messages.error(request, f'Error removing item: {e}')
-        print(f"Error: {e}")
+        
         return HttpResponse(status=500)
     
     return redirect (reverse('order'))
