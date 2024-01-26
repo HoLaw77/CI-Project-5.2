@@ -148,7 +148,9 @@
 
 <li>When I am building the order.html, I cannot render the order to the template. After checking with mentor, I realise the problem is in the context because I previously added the order model in the Order app which confused the Django with the context tag “order” which I used to render the order in order.html. Therefore, I changed the context tag to item and moved the order model to checkout app, it has become available since then.</li>
 
+<li>When I am debugging the error of remove and adjust order view, I realise the issue is because of the item_id is different in data type in the context, so I unify it by adding a str(item_id). Thanks for tutor's help in troubleshooting.</li>
 
+<li>Another bug when I am debugging remove order view is when there is only one book left in the bag, and it is impossible to remove book, because when the remove button is clicked, the add order view is triggered unintentionally. After a couple round of testing, I find out it is because I used the return redirect but not return redirect (reverse('order')) in my add order views. It is thereby solved </li>
 
 
 ![lighthouse](static/image/documentation/lighthouse.png)
