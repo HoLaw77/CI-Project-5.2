@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://ci-project5-4ad812effe24.herokuapp.com/sitemap.xml
