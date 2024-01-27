@@ -47,6 +47,9 @@ class Category(models.Model):
         (6, 'Russia'),
         (7, 'Greece'),
         (8, 'China'),
+        (9, 'Italy'),
+        (10, 'Sweden'),
+        (11, 'Canada'),
     ) 
 
     genre = models.IntegerField(choices=GENRE_CHOICE, default=1)
