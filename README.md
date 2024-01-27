@@ -10,7 +10,7 @@
 
 <p>
 
-[Traverse Book](https://traverse-book-6b6199e25c96.herokuapp.com/) is a full-stack project that enables user to make order and payment on books of different genres, languages, and cover.
+[Traverse Book](https://ci-project5-4ad812effe24.herokuapp.com/) is a full-stack project that enables user to make order and payment on books of different genres, languages, and cover.
 
 </p>
 
