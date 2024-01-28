@@ -68,7 +68,7 @@ def checkout(request):
             args=[order.order_number]))
         else:
             
-            messages.error(request, "Error with the inforamtion provided, please check the form.")
+            messages.error(request, "Error with the information provided, please check the form.")
 
             
     else:
