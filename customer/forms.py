@@ -23,6 +23,12 @@ def __init__(self, *args, **kwargs):
         
     }
 
+    for field in self.fields:
+        if self.fields[field].required:
+            placeholder = f'{placeholder[field]} *'
+        else:
+            placeholder = f'{placeholder[field]} '
+
 class BookInterestForm(forms.ModelForm):
     class Meta:
         model = BookInterest
