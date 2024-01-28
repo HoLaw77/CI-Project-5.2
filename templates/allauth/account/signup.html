@@ -19,15 +19,14 @@
 {% element form form=form method="post" action=action_url tags="entrance,signup" %}
 {% slot body %}
 {% csrf_token %}
-{% element fields form=form unlabeled=True %}
-{% endelement %}
+{{ form | crispy }}
+
 {% if redirect_field_value %}
 <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
 {% endif %}
-{% endslot %}
-{% slot actions %}
+
 <button class=" btn-dark login-button title-white title-text
-        col-lg-12 col-lg-4" type="submit"> 
+        col-lg-12 col-lg-4 mb-3" type="submit"> 
         
             <h3>
 
