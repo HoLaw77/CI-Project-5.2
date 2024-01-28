@@ -26,14 +26,8 @@ def add_order(request, books_id):
     else:
         bag[books_id] = quantity
         messages.success(request, f'Added {product.name} quantity {quantity} to your bag')
-    # item_items = bag.get('item_items')
+    
     request.session['bag'] = bag
-    
-
-    
-    # context = {
-    #     'order_items': request.session['bag']
-    # }
 
     return redirect (reverse('order'))
 
