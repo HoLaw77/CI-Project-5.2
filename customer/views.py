@@ -36,6 +36,14 @@ def show_profile(request):
     }
     return render(request, template, context)
 
-def test(request):
-    template = "customer/test.html"
+def order_history(request):
+    """Show order history"""
+    
+    template = "customer/order_history.html"
+    context ={
+        "form": form,
+        "profile": profile,
+        "order": order, 
+        'bookform': bookform,
+    }
     return render(request, template)
