@@ -11,18 +11,18 @@ from customer.models import Profile, BookInterest
 class Order(models.Model):
     """model to store Order with customer details"""
     order_number = models.CharField(max_length=64, null=False, editable=False)
-    full_name = models.CharField(max_length=100, null=True, blank=True)
+    full_name = models.CharField(max_length=100, null=True, default='')
     profile = models.ForeignKey(Profile, on_delete=models.SET_NULL,
         null=True,
         blank=True,
         related_name='orders')
     country = CountryField(blank_label = "Country", null=False, blank=False, default="USA")
-    email = models.CharField(max_length=100, null=True, blank=True)
+    email = models.CharField(max_length=100, null=True, default='')
     phone_number = models.CharField(max_length = 15, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
-    address1 = models.CharField(max_length=64, null=True, blank=True)
-    address2 = models.CharField(max_length=64, null=True, blank=True)
-    postcode = models.CharField(max_length=20, null=True, blank=True)
+    address1 = models.CharField(max_length=64, null=True, default='')
+    address2 = models.CharField(max_length=64, null=True, default='')
+    postcode = models.CharField(max_length=20, null=True, default='')
     order_total = models.DecimalField(max_digits=12, decimal_places=2, 
     null=False, default=0)
     delivery_cost = models.DecimalField(max_digits=12, decimal_places=2, 
