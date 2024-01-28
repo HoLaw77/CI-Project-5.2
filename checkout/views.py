@@ -6,6 +6,8 @@ from .forms import ConfirmOrder
 from .models import Order, OrderDetail
 from order.contexts import order_contents
 from product.models import Product
+from customer.models import Profile
+from customer.forms import ProfileForm
 import stripe
 import json
 # Create your views here.
@@ -117,6 +119,25 @@ def checkout_success(request, order_number):
 
     save_info = request.session.get("save-info")
     order = get_object_or_404(Order, order_number = order_number)
+
+    profile = Profile.objects.get(user=request.user)
+    #linking user profile to order
+    order.profile = profile
+    order.save()
+    if save_info:
+        profile_data = {
+        "full_name": order.full_name,  
+        "email": order.email, 
+        "phone_number": order.phone_number, 
+        "address1": order.address1, 
+        "address2": order.address2, 
+        "postcode": order.postcode, 
+        "country": order.country,
+        }
+    confirm_order_form = ProfileForm(profile_data, instance=profile)
+    if confirm_order_form.is_valid():
+        confirm_order_form.save()
+
     messages.success(request, 
     f'Order successfully processed. Order number is {order_number}. \
     A confirmation email will be send to {order.email}')

@@ -177,15 +177,27 @@
                     </div>
                 </div>
             </div>
+            {% if from_profile %}
+                <a href="{% url 'customer' %}">
 
-            <a href="{% url 'book' %}">
+                    <button class="bg-dark col-lg-12 col-lg-4 mt-5 mb-5 center">
+                        <p class="text-white">
 
-                <button class="bg-dark col-lg-12 col-lg-4 mt-5 mb-5 center">
-                    <p class="text-white">
+                            Back to Profile
+                        </p>
+                    </button>
+                </a>
+            {% else %}
+                <a href="{% url 'book' %}">
 
-                        Keep shopping
-                    </p>
-                </button>
+                    <button class="bg-dark col-lg-12 col-lg-4 mt-5 mb-5 center">
+                        <p class="text-white">
+
+                            Keep shopping
+                        </p>
+                    </button>
+                </a>
+            {% endif %}
         </div>
     </div>
     <div class="row">
