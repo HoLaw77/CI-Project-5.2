@@ -22,13 +22,10 @@ def __init__(self, *args, **kwargs):
         "country": "Country",
     }
     
-    self.fields['full_name'].required = True
-    self.fields['email'].required = True
-    self.fields['address1'].required = True
-    self.fields['country'].required = True
+    
 
     for field in self.fields:
         if self.fields[field].required:
             placeholder = f'{placeholder[field]} *'
-
-    
+        else:
+            placeholder = f'{placeholder[field]} '
