@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Profile, BookInterest
 from .forms import ProfileForm, BookInterestForm
+from checkout.models import Order
 # Create your views here.
 
 def show_profile(request):
@@ -8,7 +9,7 @@ def show_profile(request):
     
     profile = get_object_or_404(Profile, user=request.user)
     form = ProfileForm(instance=profile)
-    order = profile.orders.all()
+    orders = profile.orders.all()
     try:
         # Try to get BookInterest for the profile
         bookinterest = BookInterest.objects.get(profile=profile)
@@ -31,19 +32,8 @@ def show_profile(request):
     context ={
         "form": form,
         "profile": profile,
-        "order": order, 
+        "orders": orders, 
         'bookform': bookform,
     }
     return render(request, template, context)
 
-def order_history(request):
-    """Show order history"""
-    
-    template = "customer/order_history.html"
-    context ={
-        "form": form,
-        "profile": profile,
-        "order": order, 
-        'bookform': bookform,
-    }
-    return render(request, template)
