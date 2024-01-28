@@ -97,8 +97,25 @@ def checkout(request):
             return redirect(reverse('checkout'))
 
 
+        if request.user.is_authenticated:
+            try:
+                profile = Profile.objects.get(user=request.user)
+                confirm_order = ConfirmOrder(initial={
+                    'full_name': profile.full_name,
+                    'email': profile.user.email,
+                    'phone_number': profile.phone_number,
+                    'country': profile.country,
+                    'postcode': profile.postcode,
+                    'address1': profile.address1,
+                    'address2': profile.address2,
+                    
+                })
+            except Profile.DoesNotExist:
+                confirm_order = ConfirmOrder()
+        else:
+            
+            confirm_order = ConfirmOrder()
 
-        confirm_order = ConfirmOrder()
 
         if not stripe_public_key:
             messages.warning(request, 'You forget to set your stripe public key.')
