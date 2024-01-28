@@ -151,6 +151,8 @@ def checkout_success(request, order_number):
         "postcode": order.postcode, 
         "country": order.country,
         }
+    else:
+        profile_data = {}
     confirm_order_form = ProfileForm(profile_data, instance=profile)
     if confirm_order_form.is_valid():
         confirm_order_form.save()
