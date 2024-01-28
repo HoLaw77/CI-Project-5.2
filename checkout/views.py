@@ -57,7 +57,7 @@ def checkout(request):
                             quantity= order_data,
                         )
                         order_detail.save()
-
+                        
                 except Product.DoesNotExist:
                     order.delete()
                     return redirect(reverse('show_order'))

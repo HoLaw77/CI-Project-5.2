@@ -8,6 +8,7 @@ def update_on_save(sender, instance, created, **kwargs):
     """
     Update order total on order detail
     """
+    
     instance.order.generate_total()
 
 @receiver(post_delete, sender=OrderDetail)

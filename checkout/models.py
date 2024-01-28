@@ -40,7 +40,7 @@ class Order(models.Model):
         self.delivery_cost = self.order_total * settings.DELIVERY_PERCENTAGE / 100
         self.overall_total = self.order_total + self.delivery_cost
         self.save()
-
+        
 
     def save(self, *args, **kwargs):
         """
@@ -75,4 +75,5 @@ class OrderDetail(models.Model):
         super().save(*args, **kwargs)
 
     def __str__(self):
-        return str(self.id)
+        return (f' order: {self.order}, {self.product}, {self.quantity}, {self.item_total}')
+        
