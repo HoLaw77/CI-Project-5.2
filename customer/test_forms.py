@@ -24,6 +24,13 @@ class TestProfileForm(TestCase):
         self.assertIn('email', form.errors.keys())
         self.assertEqual(form.errors['email'][0], 'This field is required.')
 
+    def test_phone_number_is_required(self):
+        """test phone number is required"""
+        form = ProfileForm({'phone_number': ''})
+        self.assertFalse(form.is_valid())
+        self.assertIn('phone_number', form.errors.keys())
+        self.assertEqual(form.errors['phone_number'][0], 'This field is required.')
+
 class TestBookInterestForm(TestCase):
 
     def test_form_is_valid(self):
