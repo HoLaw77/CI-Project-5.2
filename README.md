@@ -61,6 +61,8 @@
 <li>The profile is only accessible by user who has account and logged in as clicking in the "My profile" link in the bottom of navigation bar.</li>
 <li>User can also edit their profile and share their book interest after they have created an account.</li>
 <li>After they have submitted the form. All the information will be saved and will be displayed whenever they are logged in for them to edit.<li>
+<li>If the user has ordered  items previously, it will be listed as a table at the bottom of the page at the "Order History section".</li>
+<li>When clicking into the order number, it will lead the user back to the checkout success page which they can view the order details.</li>
 
 <h3>My Profile in nav bar</h3>
 
@@ -70,6 +72,10 @@
 <h3>Profile and Book Interest form</h3>
 
 ![profile_page](static/image/documentation/profile.png)
+
+<h3>Order History Section</h3>
+
+![order_histoy]()
 
 <h2>How to view Order</h2>
 
@@ -126,13 +132,37 @@
 
 <li>To achieve that, I have tried to input books of different languages apart from English such as Chinese, France, Japanese in order to make this available. There will be room for further development if there is more stock in my knowledge.</li>
 
+<h3>SEO and Keyword</h3>
+
+<li></li>
+
 <h3>Agile approach in development </h3>
 
 ![agile_example](static/image/documentation/agile_example.png)
 
 <li>I have follow the agile approach in this project by setting up various issues to improve my project throughout the development process</li>
 
+<li>User Story</li>
 
+<table>
+<thead>
+    <tr>
+    <th>User Story</th>
+    <th>Type of User needed</th>
+    <th>Features in the project</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td>
+    <h5>DIFFERENT LANGUAGES BOOK</h5>
+    <p>As a multilingual reader, I want to be able to find books of different languages, so that I can fit my reading appetite.</p>
+    </td>
+    <td>Multilingual reader</td>
+    <td>Book page</td>
+    </tr>
+</tbody>
+</table>
 
 <h2>Testing</h2>
 <li>I tested that this page works in different browser such as: Chrome, Microsoft-edge, Firefox.</li>
