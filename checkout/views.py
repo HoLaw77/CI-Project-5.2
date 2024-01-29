@@ -10,6 +10,9 @@ from customer.models import Profile
 from customer.forms import ProfileForm
 import stripe
 import json
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 # Create your views here.
 
 @require_POST
@@ -170,5 +173,36 @@ def checkout_success(request, order_number):
         'order': order,
         'order_number': order_number
     }
-
+    confirmation_email(order_number)
+    print('email sent')
     return render (request, template, context) 
+
+def confirmation_email(order_number):
+    """Send confirmation email for customer after payment"""
+    try:
+        order = get_object_or_404(Order, order_number=order_number)
+        customer = order.profile.user
+        order_number = order_number
+        overall_total = order.overall_total
+        date = order.date
+        link = "https://ci-project5-4ad812effe24.herokuapp.com/customer/order_history/" + order_number
+
+        subject = f'Payment Confirmation: {order_number}'
+        
+        # Using render_to_string to render HTML content from a template
+        html_message = render_to_string('email/email_confirmation.html', 
+        {'order_number': order_number, 'overall_total': overall_total, 'date': date, 
+        'link': link})
+        
+        # Stripping HTML tags to get the plain text version of the email
+        plain_message = strip_tags(html_message)
+        
+        from_email = 'howanlaw707@gmail.com'
+        recipient_list = [customer.email]
+        
+        send_mail(subject, plain_message, from_email, recipient_list, 
+        fail_silently=False)
+        print('email sent')
+
+    except Exception as e:
+        print(f'error, no email sent. {e}')
