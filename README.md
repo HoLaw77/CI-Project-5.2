@@ -199,7 +199,7 @@
 <li>Set The SECRET_KEY in setting.py</li>
 <li>Once the link is deployed, the link is generated</li>
 
-<p>The link is below https://traverse-book-6b6199e25c96.herokuapp.com/</p>
+<p>The link is below https://ci-project5-4ad812effe24.herokuapp.com/</p>
 
 
 <h2>Credit</h2>
@@ -208,7 +208,7 @@
 
 <li>Model structure has been advised by my mentor Juliia Konovalov. Many Thanks for his patient and helpful guidance.</li>
 
-<li> adjusting and deleting order, checkout app, stripe payment and templates, filter and searching, payment structure are inspired by tutorial of Boutique Ado project in Code Institute course.
+<li> adjusting and deleting order, checkout app, stripe payment and templates, filter and searching, payment structure, profile, and order history page are inspired by tutorial of Boutique Ado project in Code Institute course.
 
 [Boutique_Ado_Github]( https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/250e2c2b8e43cccb56b4721cd8a8bd4de6686546)
 </li>
