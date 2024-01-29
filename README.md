@@ -161,6 +161,90 @@
     <td>Multilingual reader</td>
     <td>Book page</td>
     </tr>
+    <tr>
+    <td>
+    <h5>DISPLAY BOOK PUBLICATION INFORMATION</h5>
+    <p>As a student, I want to be able to know about the book publication information, so that I can find the exact book and cite them when necessary.</p>
+    </td>
+    <td>Student</td>
+    <td>Book page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>BOOK DELIVERY</h5>
+    <p>As a reader living oversea, I would like to order the book to be delivered, so that I can save time to order it separately.</p>
+    </td>
+    <td>Reader Living Oversea</td>
+    <td>Home Page, Order and Checkout Page mock up Delivery details and cost</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>PRICE OF DELIVERY</h5>
+    <p>As a reader living oversea, I am able to know about the price with delivery cost, so that I can pay without calculating it myself.</p>
+    </td>
+    <td>Reader living oversea</td>
+    <td>Order and Checkout Page shown 5% delivery cost</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>SEARCH BOOKS</h5>
+    <p>As a researcher, I am able to find books relating to my research field, so that I can save time to browse around.</p>
+    </td>
+    <td>Research or Student</td>
+    <td>Book page enable keyword search including book name and author</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>SEE PRODUCT TOTAL PRICE</h5>
+    <p>As a normal customer, I am able to see the total price before I pay, so that I can plan how I want to buy accordingly</p>
+    </td>
+    <td>Normal Customer</td>
+    <td>Order page and Checkout Page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>CANCEL PRODUCT</h5>
+    <p>As a normal customer, I am able to cancel my order easily so that I can cancel any item I want.</p>
+    </td>
+    <td>normal customer</td>
+    <td>Remove button and Remove all button in order page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>EDIT CHOICE</h5>
+    <p>As a normal customer, I am able to edit the number of my choice easily, 
+    so that I can change my options when I find better books</p>
+    </td>
+    <td>normal customer</td>
+    <td>Edit button in order page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>ADD INTEREST IN PROFILE</h5>
+    <p>As a reader who likes to share, I am able to create my book interest 
+    so that I can receive emails of related books news</p>
+    </td>
+    <td>Reader who likes to share</td>
+    <td>Book Interest form in profile page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>EDIT PROFILE</h5>
+    <p>As a user, I am able to edit my profile stored so that I can keep my 
+    information up to date</p>
+    </td>
+    <td>User</td>
+    <td>Profile page which enable user to update and save their information</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>SORT PRODUCT</h5>
+    <p>As a normal customer, I am able to sort the product by price to have a 
+    plan in my budget.</p>
+    </td>
+    <td>normal customer</td>
+    <td>Sort bar in book page with price as an order</td>
+    </tr>
 </tbody>
 </table>
 
