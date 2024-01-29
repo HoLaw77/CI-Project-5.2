@@ -249,7 +249,7 @@
     <td>
     <h5>PAYMENT CONFIRMATION EMAIL</h5>
     <p>As a normal customer, I am able to receive confirmation email after 
-    payment.</p>
+    payment. So that I can ensure the payment is successful.</p>
     </td>
     <td>normal customer</td>
     <td><p>Email will be sent after checkout page</p>
