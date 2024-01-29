@@ -245,6 +245,17 @@
     <td>normal customer</td>
     <td>Sort bar in book page with price as an order</td>
     </tr>
+    <tr>
+    <td>
+    <h5>PAYMENT CONFIRMATION EMAIL</h5>
+    <p>As a normal customer, I am able to receive confirmation email after 
+    payment.</p>
+    </td>
+    <td>normal customer</td>
+    <td><p>Email will be sent after checkout page</p>
+    <img>
+    </td>
+    </tr>
 </tbody>
 </table>
 
