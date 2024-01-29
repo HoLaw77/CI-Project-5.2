@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 import os
+import sys
 import dj_database_url
 from pathlib import Path
 if os.path.exists("env.py"):
@@ -139,16 +140,8 @@ else:
         }
     }
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': BASE_DIR / 'db.sqlite3',
-#     }
-# }
-
-# DATABASES = {
-#     'default': dj_database_url.parse('postgres://uwuxkqwuqle:nBYDReybZiYN@ep-gentle-mountain-a23bxz6h.eu-central-1.aws.neon.tech/candy_scare_eject_143413')
-# }
+if 'test' in sys.argv:
+    DATABASES['default']['ENGINE'] = 'django.db.backends.sqlite3'
 
 
 # Password validation

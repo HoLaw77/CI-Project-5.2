@@ -28,7 +28,7 @@ def show_profile(request):
         bookform = BookInterestForm(request.POST, instance=bookinterest)
         bookform.save()
 
-    print('order', orders)
+    
     template = "customer/customer.html"
     context ={
         "form": form,

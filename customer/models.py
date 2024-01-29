@@ -22,10 +22,10 @@ class Profile(models.Model):
     full_name = models.CharField(max_length=100, null=True, default='')
     country = CountryField(blank_label = "Country", null=False, blank=False, default="USA")
     email = models.CharField(max_length=100, null=True, default='')
-    phone_number = models.CharField(max_length = 15, null=True, blank=True)
-    address1 = models.CharField(max_length=64, null=True, blank=True)
-    address2 = models.CharField(max_length=64, null=True, blank=True)
-    postcode = models.CharField(max_length=20, null=True, blank=True)
+    phone_number = models.CharField(max_length = 15, null=True, default='')
+    address1 = models.CharField(max_length=64, null=True, default='')
+    address2 = models.CharField(max_length=64, null=True, default='')
+    postcode = models.CharField(max_length=20, null=True, default='')
     
 
     def __str__(self):
