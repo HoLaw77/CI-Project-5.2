@@ -132,16 +132,23 @@
 
 ![confirmation_email_heading](static/image/documentation/confirmation_email1.png)
 ![confirmation_email_content](static/image/documentation/confirmation_email2.png)
+<li>When clicking into the link, it will lead user back to their order.</li>
+
+![email_order_link](static/image/documentation/confirmation_email2.png)
+
 
 
 <h2>How to Delete and Edit Order</h2>
 <li>User can delete order by clicking the remove button in each product in order page. After clicking it will remove the product and stay in the order page.</li>
 
+<li>User can also choose to remove all products by clicking the remove all button.</li>
 <li> User can also adjust the number of books they want by clicking the number bar to adjust, by clicking the submit button, it will update the number of books and price automatically.</li>
 
 <h3>Adjust button and Remove button for each product in order page</h3>
 
 ![edit_and_delete_order](static/documentations/edit_and_delete_order.png)
+
+![remove_successful](static/documentations/remove_succeful.png)
 
 <h2>Development</h2>
 <h3> Original Flowchart and Wireframe</h3>
@@ -175,9 +182,17 @@
 <li>A facebook page has been mocked up with the product image as an icon for future promotion and the link to the page has been attached in the icon of the footer.</li>
 <li>The facebook page acts as a medium to attract user to our website to view products and activity promotion.</li>
 
+[Facebook page](https://www.facebook.com/people/Traverse-Book/61554559140023/)
+
+![facebook_page](static/image/documentation/facebook_page.png)
+
 <h3>Instagram: Reader instagram</h3>
 
 <li>In view of the trend of bookstagram which means using Instagram account to share books, reviews and comment. I have mocked up an instagram account with a bilingual book review written as an experiment for future activity such as book club as a promotion.</li>
+
+[Instagram page: Traverse Book](https://www.instagram.com/traverse.bookreader?igsh=MXR2dnF2ejB3aWM5bw==)
+
+![instagram_page](static/image/documentation/instagram_page.png)
 
 <h3>Subscription News letter</h3>
 
@@ -189,6 +204,8 @@
 <h3>SEO and Keyword</h3>
 
 <li>I have added the genre of books we offer in the HTML head element tag to enrich the SEO performance of my page. The logic behind is to capture the keyword when reader is looking for particular subject or genre of books</li>
+
+![SEO Keyword and Description](static/image/documentation/seo_description_and_keyword.png)
 
 <h3>Visual Design</h3>
 
