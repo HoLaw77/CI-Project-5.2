@@ -194,12 +194,16 @@
 
 ![instagram_page](static/image/documentation/instagram_page.jpg)
 
-<h3>Subscription News letter</h3>
+<h3>Subscription Newsletter</h3>
 
 <li>A pop-up subscription form is also built using MailChimp to mock up a news letter subscription functionality to keep user updated for the new book in the shop.</li>
 
+![newsletter pop-up form](static/image/documentation/newsletter_subscription_form.png)
+
 <h3>In-page promotion</h3>
 <li>In the top nav bar, there is a statement promoting delivery available and it only counts 5% of the total price to let the user know before making any purchase.</li>
+
+![top nav bar](static/image/documentation/topnav.png)
 
 <h3>SEO and Keyword</h3>
 
@@ -368,8 +372,14 @@
 
 <li>Another bug when I am debugging remove order view is when there is only one book left in the bag, and it is impossible to remove book, because when the remove button is clicked, the add order view is triggered unintentionally. After a couple round of testing, I find out it is because I used the return redirect but not return redirect (reverse('order')) in my add order views. It is thereby solved </li>
 
+<p>lighthouse desktop</p>
 
-![lighthouse](static/image/documentation/lighthouse.png)
+![lighthouse_desktop](static/image/documentation/lighthouse_desktop.png)
+
+<p>lighthouse mobile</p>
+
+![lighthouse_mobile](static/image/documentation/lighthouse_mobile.png)
+
 <h2>Deployment</h2>
 
 <p>The page is deployed using heroku, following the below steps:</p>
