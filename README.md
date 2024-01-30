@@ -59,9 +59,10 @@
 
 <li>The profile is only accessible by user who has account and logged in as clicking in the "My profile" link in the bottom of navigation bar.</li>
 <li>User can also edit their profile and share their book interest after they have created an account.</li>
-<li>After they have submitted the form. All the information will be saved and will be displayed whenever they are logged in for them to edit.<li>
+<li>After they have submitted the form. All the information will be saved and will be displayed whenever they are logged in for them to edit.</li>
 <li>If the user has ordered  items previously, it will be listed as a table at the bottom of the page at the "Order History section".</li>
 <li>When clicking into the order number, it will lead the user back to the checkout success page which they can view the order details.</li>
+<li>At the bottom of profile page, there are two links to connect the user to Facebook page and Instagram page as well in order to encourage them to connect and share and promote the bookstore at the same time.</li>
 
 <h3>My Profile in nav bar</h3>
 
@@ -70,30 +71,50 @@
 
 <h3>Profile and Book Interest form</h3>
 
-![profile_page](static/image/documentation/profile.png)
+![profile_page](static/image/documentation/profile_form.png)
+![book_interest](static/image/documentation/book_interest.png)
 
 <h3>Order History Section</h3>
 
-![order_histoy]()
+![order_histoy](static/image/documentation/order_history.png)
+
+<h3>Promote Social media at the bottom</h3>
+
+![social_media_link](static/image/documentation/social_media_link.png)
+
 
 <h2>How to view Order</h2>
 
 <li>User can click on the "View Your Order" button at the top right corner of the page to view and amend orders at navigation bar.</li>
 
-<h3>Check Your Order button</h3>
+<h3>View Your Order button</h3>
 
-![check_your_order](static/image/documentation/check_your_order.png)
+![view_your_order](static/image/documentation/view_your_order.png)
 
 <h2>How to check out and make payment</h2>
 <li>User can check out by clicking the checkout button at the bottom of the order page.</li>
-<li>It will lead the user to the checkout page where they can view their order displayed at the top of the page and a form for them to input their full name, email, phone number and address date. At the bottom of the page, there is a card payment field which enables them to type their card number, CVC code and the expiration date. </li>
+<li>It will lead the user to the checkout page where they can view their order sumary displayed at the top of the page and a form for them to input their full name, email, phone number and address date with the checkbox for them to tick if they want to save these information into their profile as to respect GDPR rules.</li>
+
+ At the bottom of the page, there is a card payment field which enables them to type their card number, CVC code and the expiration date. As to remind the user of the amount they are going to pay in red. </li>
 <li>After submitting the payment form, there will be an authentication screen pops out by the Stripe 3D authentication to ensure that the payment is authenticated by the user. If the user declines the payment, it will lead them back to the checkout page with the form filled</li>
 
 <li>If the payment is successful, it will lead the user to the checkout_success page where they will see the confirmation of the payment and the order number generated at the top of the page, with the order summary displayed again. The billing information is also displayed such as the order total ,delivery cost, and overall total. They can also click continue shopping if they want to shop for more.</li>
 
+<li>As stated in the successful purchase message and the page written, a confirmation is sent to the user after finishing purchase with the link to return back to the checkout_success page.</li>
+
 <h3>Payment form</h3>
 
-![payment_form](static/image/documentation/payment_form.png)
+<h4>Order Summary</h4>
+
+![payment_form_order_summary](static/image/documentation/payment_form_order_summary.png)
+
+<h4>Contact and Delivery Information</h4>
+
+![payment_form_form_fields](static/image/documentation/payment_form_form_fields.png)
+
+<h4>Card Payment Details</h4>
+
+![payment_form_card](static/image/documentation/payment_form_card.png)
 
 <h3>Checkout authentication by Stripe</h3>
 
@@ -101,7 +122,17 @@
 
 <h3>Checkout Success Page with the Order details rendered out</h3>
 
-![checkout_success](static/image/documentation/payment_success.png)
+![checkout_success](static/image/documentation/payment_success1.png)
+
+<h3>Checkout Success Page with the Billing and Delivery information printed out</h3>
+
+![checkout_success2](static/image/documentation/payment_success2.png)
+
+<h3>Confirmation Email</h3>
+
+![confirmation_email_heading](static/image/documentation/confirmation_email1.png)
+![confirmation_email_content](static/image/documentation/confirmation_email2.png)
+
 
 <h2>How to Delete and Edit Order</h2>
 <li>User can delete order by clicking the remove button in each product in order page. After clicking it will remove the product and stay in the order page.</li>
