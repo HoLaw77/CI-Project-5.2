@@ -336,6 +336,20 @@
 
 </li>
 
+<li>Newsletter popup form from MailChimp
+
+[MailChimp](https://mailchimp.com/landers/email-marketing-platform/?ds_c=DEPT_AOC_Google_Search_UK_EN_Brand_Acquire_Exact_MKAG_UK&ds_kids=p77184324956&ds_a_lid=kwd-2285511033&ds_cid=71700000112280664&ds_agid=58700008474313140&gad_source=1&gclid=EAIaIQobChMIqqah3vyEhAMVlJJQBh0TsgTuEAAYASAAEgLmNvD_BwE&gclsrc=aw.ds&currency=GBP)
+
+</li>sitemap.xml from xml-sitemaps
+
+[xml-sitemaps](https://www.xml-sitemaps.com/)
+
+<li>Privacy policy from Privacy Policy Generator
+
+[Privacy Policy Generator](https://www.privacypolicygenerator.info/)
+
+</li>
+
 
 <h3>Media</h3>
 
