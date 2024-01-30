@@ -13,8 +13,8 @@
     {% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
 </p>
 
-<form class="login mt-5 col-md-7 d-flex flex-column login-form" method="POST" 
-    action="{% url 'account_signup' %}">
+<form class="login mt-5 col-md-7 d-flex flex-column login-form title-text" 
+method="POST" action="{% url 'account_signup' %}">
 
 {% element form form=form method="post" action=action_url tags="entrance,signup" %}
 {% slot body %}
@@ -28,7 +28,7 @@
 <button class=" btn-dark login-button title-white title-text
         col-lg-12 col-lg-4 mb-3" type="submit"> 
         
-            <h3>
+            <h3 class="title-text text-white">
 
                 Sign Up
             </h3>

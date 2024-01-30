@@ -13,7 +13,8 @@
     <div class="row">
         <div class="col-lg-12 col-lg-6">
             <h5 class="title-text"> <strong>Personal Information</strong></h5>
-            <form action="{% url 'customer' %}" method="POST" id="profile-form">
+            <form action="{% url 'customer' %}" method="POST" id="profile-form"
+            class="title-text">
                 {% csrf_token %}
                 {{form | crispy}}
                 <h5 class="title-text"> <strong>
@@ -38,7 +39,7 @@
 
     <div class="col-lg-12 col-lg-6">
         <h2 class="title-text text-center">Order History</h2>
-        <table class="col-lg-12 mt-5 ml-2">
+        <table class="col-lg-12 mt-5 ml-2 title-text">
             <thead>
                 <tr>
                     <th>Order Number</th>
