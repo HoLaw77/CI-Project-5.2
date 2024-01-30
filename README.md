@@ -155,7 +155,12 @@
 
 <h3>SEO and Keyword</h3>
 
-<li></li>
+<li>I have added the genre of books we offer in the HTML head element tag to enrich the SEO performance of my page. The logic behind is to capture the keyword when reader is looking for particular subject or genre of books</li>
+
+<h3>Visual Design</h3>
+
+<li>Color: I deliberately picked white background and black font color as minimalist style. </li>
+<li>Font: The font Gideon Roman is picked as the font-family of most of the word in the page because it looks similar to Time New Roman in word and it is a traditional and classic style of font that looks like bookshop or bookish people will sync with.</li>
 
 <h3>Agile approach in development </h3>
 
@@ -284,7 +289,18 @@
 <li>I tested that this page works in different browser such as: Chrome, Microsoft-edge, Firefox.</li>
 <li>I confirmed the project is responsive, look goods and function on all standard size screen using devtool device tool bar.</li>
 
+<h2>Manual Testing</h2>
 
+<li>USER STORY: </li>
+
+
+<h2>Automated Testing</h2>
+<h2>HTML Validation</h2>
+
+<li></li>
+
+<h2>CSS Validation</h2>
+<li>No Error reported from https://validator.w3.org/nu/</li>
 
 <h2>Bugs</h2>
 

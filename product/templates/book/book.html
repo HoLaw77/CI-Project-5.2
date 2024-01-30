@@ -24,59 +24,58 @@
 
     <div class="container">
         <div class="row">
-            
-                <button class="btn btn-dark dropdown-toggle col-lg-12 col-lg-3
-            mt-4" 
-                type="button" data-toggle="dropdown">
-                    <h5 class="title-text text-white">Sort by</h5>
-                </button>
-                <ul class="dropdown-menu">
-                    <li>
 
-                        <a href="{% url 'book' %}">
-                            <h5 class="title-text text-dark">
+            <button class="btn btn-dark dropdown-toggle col-lg-12 col-lg-3
+            mt-4" type="button" data-toggle="dropdown">
+                <h5 class="title-text text-white">Sort by</h5>
+            </button>
+            <ul class="dropdown-menu">
+                <li>
 
-                                None
-                            </h5>
-                        </a>
-                    </li>
-                    <li>
+                    <a href="{% url 'book' %}">
+                        <h5 class="title-text text-dark">
 
-                        <a href="{% url 'book' %}?sort=price&direction=asc">
-                            <h5 class="title-text text-dark">
+                            None
+                        </h5>
+                    </a>
+                </li>
+                <li>
+
+                    <a href="{% url 'book' %}?sort=price&direction=asc">
+                        <h5 class="title-text text-dark">
                             Price (low to high)
-                            </h5>
-                        </a>
+                        </h5>
+                    </a>
 
-                    </li>
-                    <li>
+                </li>
+                <li>
 
-                        <a href="{% url 'book' %}?sort=price&direction=desc">
-                            <h5 class="title-text text-dark">
+                    <a href="{% url 'book' %}?sort=price&direction=desc">
+                        <h5 class="title-text text-dark">
                             Price (high to
                             low)
-                            </h5>
-                        </a>
-                    </li>
-                    <li>
+                        </h5>
+                    </a>
+                </li>
+                <li>
 
-                        <a href="{% url 'book' %}?sort=name&direction=asc">
-                            <h5 class="title-text text-dark">
+                    <a href="{% url 'book' %}?sort=name&direction=asc">
+                        <h5 class="title-text text-dark">
                             Name (A-Z)
-                            </h5>
-                        </a>
-                    </li>
-                    <li>
+                        </h5>
+                    </a>
+                </li>
+                <li>
 
-                        <a href="{% url 'book' %}?sort=name&direction=desc">
-                            <h5 class="title-text text-dark">
+                    <a href="{% url 'book' %}?sort=name&direction=desc">
+                        <h5 class="title-text text-dark">
                             Name (Z-A)
-                            </h5>
-                        </a>
-                    </li>
-                </ul>
+                        </h5>
+                    </a>
+                </li>
+            </ul>
 
-            
+
 
 
 
@@ -116,10 +115,10 @@
                 <div class="col-sm-5, col-md-4, col-xl-3, col-lg-3
                     {% if books|length == 1 %} col-lg-12 {% endif %}">
                     <div class="card h-200 border-0">
-                        
-                        
+
+
                         {% for image in images %}
-                        
+
                         {% if image.product.name == book.name %}
                         <a href="{% url 'book_detail' book.id %}">
                             <div class="card h-5 w-5 border-0">
@@ -134,7 +133,7 @@
 
                                 <h5 class="md-0 title-text">
                                     <strong>
-                                        
+
                                         {{book.name}}
                                     </strong>
                                 </h5>
@@ -152,7 +151,7 @@
                                 Year of Publication: {{book.year_of_publication}}
                             </p>
                         </div>
-                        
+
                         {% if book.category %}
                         <div class="card-body">
 

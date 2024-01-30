@@ -161,13 +161,13 @@ main{
 @media only screen and (max-width: 600px)  {
     .social-media-icon>li {
         display: block;
-        padding: clear;
+        
         font-size: 200%;
     } 
 
     .main{
         background: url('https://res.cloudinary.com/dcdwmtmce/image/upload/v1706308967/static/image/ocean-book-glass-vehicle-sunglass-bag-105434.c928612d7104.jpg') no-repeat center;
-        background-image: cover;
+        
         height: 700px;
     }
     
