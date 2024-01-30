@@ -68,7 +68,8 @@
                                         max="5" data-item_id="{{ item.item_id }}" 
                                         id="id_qty_{{ item.item_id }}">
                                     <button 
-                                        class=" col-lg-12 col-lg-4 bg-success text-white" 
+                                        class=" col-lg-12 col-lg-4 bg-success 
+                                        text-white title-text" 
                                         type="submit">
                                         Submit
                                     </button>
@@ -96,10 +97,10 @@
     
                 </div>
         <div class="col-lg-12 mb-5">
-            <p>Please fill out the form to complete your order.</p>
+            <p class="title-text">Please fill out the form to complete your order.</p>
             <form action="{% url 'checkout' %}" method="POST" id="payment-form">
                 {% csrf_token %}
-                <fieldset class="mb-3">
+                <fieldset class="mb-3 title-text">
                     <strong>
 
                         Contact Information
@@ -109,7 +110,7 @@
             
                 {{confirm_order.email | as_crispy_field }}
                 {{confirm_order.phone_number | as_crispy_field }}
-                <fieldset class="mb-3">
+                <fieldset class="mb-3 title-text">
                     <strong>
 
                         Delivery Information 
@@ -156,7 +157,7 @@
                 <div class="col-lg-12 mt-3">
 
                     <fieldset class="mt-4 mb-3">
-                        <h5>Payment</h5>
+                        <h5 class="title-text">Payment</h5>
                         <!-- A Stripe card element will go here -->
                         <div class="mb-3 mt-3" id="card-element"></div>
                         
@@ -177,7 +178,8 @@
 
                         </div>
                 </div>
-            <button class="col-lg-12, col-lg-6 mt-4 bg-success text-white"
+            <button class="col-lg-12, col-lg-6 mt-4 bg-success text-white
+            title-text mb-5"
             id="submit-button">
                 Submit</button>
             </form>            
