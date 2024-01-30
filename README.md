@@ -1,11 +1,11 @@
 <h1>Traverse Book</h1>
 
-![logo](static/image/documentation/logo.png)
+![favicon](static/image/favicon.png)
 
+![logo](static/image/documentation/logo.png)
 
 ![responsiveness](static/image/documentation/responsiveness.png)
 
-<p>Note: I have attempted to use amiresponsive but were unable to without a https url. so I used screenshot from chrome to show responsiveness</p>
 
 <p>
 
@@ -152,6 +152,9 @@
 
 <li>A pop-up subscription form is also built using MailChimp to mock up a news letter subscription functionality to keep user updated for the new book in the shop.</li>
 
+<h3>In-page promotion</h3>
+<li>In the top nav bar, there is a statement promoting delivery available and it only counts 5% of the total price to let the user know before making any purchase.</li>
+
 <h3>SEO and Keyword</h3>
 
 <li>I have added the genre of books we offer in the HTML head element tag to enrich the SEO performance of my page. The logic behind is to capture the keyword when reader is looking for particular subject or genre of books</li>
@@ -294,9 +297,13 @@
 
 
 <h2>Automated Testing</h2>
+
+<h3>Covered app:</h3>
+<li></li>
+
 <h2>HTML Validation</h2>
 
-<li></li>
+<li>No Error reported from https://validator.w3.org/nu/</li>
 
 <h2>CSS Validation</h2>
 <li>No Error reported from https://validator.w3.org/nu/</li>
