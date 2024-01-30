@@ -132,6 +132,20 @@
 
 <li>To achieve that, I have tried to input books of different languages apart from English such as Chinese, France, Japanese in order to make this available. There will be room for further development if there is more stock in my knowledge.</li>
 
+<h2>Marketing Strategy</h2>
+
+<h3>Facebook page</h3>
+
+<li>A facebook page has been mocked up with the product image as an icon for future promotion and the link to the page has been attached in the icon of the footer.</li>
+
+<h3>Instagram: Reader instagram</h3>
+
+<li>In view of the trend of bookstagram which means using Instagram account to share books, reviews and comment. I have mocked up an instagram account with a bilingual book review written as an experiment for future activity such as book club as a promotion.</li>
+
+<h3>Subscription News letter</h3>
+
+<li>A pop-up subscription form is also built using MailChimp to mock up a news letter subscription functionality to keep user updated for the new book in the shop.</li>
+
 <h3>SEO and Keyword</h3>
 
 <li></li>
