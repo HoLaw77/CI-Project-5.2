@@ -45,3 +45,10 @@ class ConfirmOrderForm(TestCase):
         self.assertFalse(form.is_valid())
         self.assertIn('postcode', form.errors.keys())
         self.assertEqual(form.errors['postcode'][0], 'This field is required.')
+
+    def test_form_init(self):
+        """test Confirm Order form init by creating an instance"""
+        form = ConfirmOrder()
+        self.assertIsInstance(form, ConfirmOrder)
+
+    
