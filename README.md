@@ -3,8 +3,7 @@
 ![logo](static/image/documentation/logo.png)
 
 
-![responsiveness_mobile](static/image/documentation/responsive_mobile.png)
-![responsiveness_desktop](static/image/documentation/responsive_desktop.png)
+![responsiveness](static/image/documentation/responsiveness.png)
 
 <p>Note: I have attempted to use amiresponsive but were unable to without a https url. so I used screenshot from chrome to show responsiveness</p>
 
