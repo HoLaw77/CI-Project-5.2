@@ -139,27 +139,25 @@
                                 </h5>
                             </a>
 
-                        </div>
-                        <div class="card-body">
                             <p class="title-text">Author: {{book.author}}</p>
-                        </div>
-                        <div class="card-body">
+                        
+                        
                             <p class="title-text">Publisher: {{book.publisher}}</p>
-                        </div>
-                        <div class="card-body">
+                        
+                        
                             <p class="title-text">
                                 Year of Publication: {{book.year_of_publication}}
                             </p>
-                        </div>
+                        
 
                         {% if book.category %}
-                        <div class="card-body">
+                        
 
                             <p class="title-text">
                                 Genre: {{book.category.get_genre_display}}
                             </p>
+                            {% endif %}
                         </div>
-                        {% endif %}
                         <div class="card-body font-weight-bold">
                             <p class="title-text">
                                 <strong>
