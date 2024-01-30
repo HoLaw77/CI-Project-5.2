@@ -45,13 +45,13 @@
 
 <h3>Add to cart button in book detail page</h3>
 
-![add_to_cart_button](static/image/documentation/add_to_cart.png)
+![add_to_cart_button](static/image/documentation/add_to_cart_button.png)
 
 <br>
 <br>
 <h3>Order page, checkout button and keep shopping button</h3>
 
-![order_page](static/image/documentation/cart.png)
+![order_page](static/image/documentation/order_page.png)
 
 <br>
 
@@ -146,14 +146,14 @@
 
 <h3>Adjust button and Remove button for each product in order page</h3>
 
-![edit_and_delete_order](static/documentation/edit_and_delete_order.png)
+![edit_and_delete_order](static/image/documentation/edit_and_delete_order.png)
 
-![remove_successful](static/documentation/remove_succeful.png)
+![remove_successful](static/image/documentation/remove_succeful.png)
 
 <h2>Development</h2>
 <h3> Original Flowchart and Wireframe</h3>
 
-![database_structure](static/documentation/database_structure.png)
+![database_structure](static/image/documentation/database_structure.png)
 
 <p>Checkout app and Order app was added later during the coding process.</p>
 
@@ -347,6 +347,120 @@
 
 <li>USER STORY: </li>
 
+<table>
+<thead>
+    <tr>
+    <th>User Story</th>
+    <th>Type of User needed</th>
+    <th>Features in the project</th>
+    </tr>
+</thead>
+<tbody>
+    <tr>
+    <td>
+    <h5>DIFFERENT LANGUAGES BOOK</h5>
+    <p>As a multilingual reader, I want to be able to find books of different languages, so that I can fit my reading appetite.</p>
+    </td>
+    <td>Multilingual reader</td>
+    <td>Book page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>DISPLAY BOOK PUBLICATION INFORMATION</h5>
+    <p>As a student, I want to be able to know about the book publication information, so that I can find the exact book and cite them when necessary.</p>
+    </td>
+    <td>Student</td>
+    <td>Book page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>BOOK DELIVERY</h5>
+    <p>As a reader living oversea, I would like to order the book to be delivered, so that I can save time to order it separately.</p>
+    </td>
+    <td>Reader Living Oversea</td>
+    <td>Home Page, Order and Checkout Page mock up Delivery details and cost</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>PRICE OF DELIVERY</h5>
+    <p>As a reader living oversea, I am able to know about the price with delivery cost, so that I can pay without calculating it myself.</p>
+    </td>
+    <td>Reader living oversea</td>
+    <td>Order and Checkout Page shown 5% delivery cost</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>SEARCH BOOKS</h5>
+    <p>As a researcher, I am able to find books relating to my research field, so that I can save time to browse around.</p>
+    </td>
+    <td>Research or Student</td>
+    <td>Book page enable keyword search including book name and author</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>SEE PRODUCT TOTAL PRICE</h5>
+    <p>As a normal customer, I am able to see the total price before I pay, so that I can plan how I want to buy accordingly</p>
+    </td>
+    <td>Normal Customer</td>
+    <td>Order page and Checkout Page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>CANCEL PRODUCT</h5>
+    <p>As a normal customer, I am able to cancel my order easily so that I can cancel any item I want.</p>
+    </td>
+    <td>normal customer</td>
+    <td>Remove button and Remove all button in order page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>EDIT CHOICE</h5>
+    <p>As a normal customer, I am able to edit the number of my choice easily, 
+    so that I can change my options when I find better books</p>
+    </td>
+    <td>normal customer</td>
+    <td>Edit button in order page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>ADD INTEREST IN PROFILE</h5>
+    <p>As a reader who likes to share, I am able to create my book interest 
+    so that I can receive emails of related books news</p>
+    </td>
+    <td>Reader who likes to share</td>
+    <td>Book Interest form in profile page</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>EDIT PROFILE</h5>
+    <p>As a user, I am able to edit my profile stored so that I can keep my 
+    information up to date</p>
+    </td>
+    <td>User</td>
+    <td>Profile page which enable user to update and save their information</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>SORT PRODUCT</h5>
+    <p>As a normal customer, I am able to sort the product by price to have a 
+    plan in my budget.</p>
+    </td>
+    <td>normal customer</td>
+    <td>Sort bar in book page with price as an order</td>
+    </tr>
+    <tr>
+    <td>
+    <h5>PAYMENT CONFIRMATION EMAIL</h5>
+    <p>As a normal customer, I am able to receive confirmation email after 
+    payment. So that I can ensure the payment is successful.</p>
+    </td>
+    <td>normal customer</td>
+    <td><p>Email will be sent after checkout page</p>
+    <img>
+    </td>
+    </tr>
+</tbody>
+</table>
 
 <h2>Automated Testing</h2>
 
