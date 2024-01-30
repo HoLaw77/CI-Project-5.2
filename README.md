@@ -118,15 +118,15 @@
 
 <h3>Checkout authentication by Stripe</h3>
 
-![3d_authentication](static/image/documentation/3d_authentication.png)
+![3d_authentication](static/image/documentation/3d-authentication.png)
 
 <h3>Checkout Success Page with the Order details rendered out</h3>
 
-![checkout_success](static/image/documentation/payment_success1.png)
+![checkout_success](static/image/documentation/checkout_success1.png)
 
 <h3>Checkout Success Page with the Billing and Delivery information printed out</h3>
 
-![checkout_success2](static/image/documentation/payment_success2.png)
+![checkout_success2](static/image/documentation/checkout_success2.png)
 
 <h3>Confirmation Email</h3>
 
@@ -134,7 +134,7 @@
 ![confirmation_email_content](static/image/documentation/confirmation_email2.png)
 <li>When clicking into the link, it will lead user back to their order.</li>
 
-![email_order_link](static/image/documentation/confirmation_email2.png)
+![email_order_link](static/image/documentation/email_order_link.png)
 
 
 
@@ -146,14 +146,14 @@
 
 <h3>Adjust button and Remove button for each product in order page</h3>
 
-![edit_and_delete_order](static/documentations/edit_and_delete_order.png)
+![edit_and_delete_order](static/documentation/edit_and_delete_order.png)
 
-![remove_successful](static/documentations/remove_succeful.png)
+![remove_successful](static/documentation/remove_succeful.png)
 
 <h2>Development</h2>
 <h3> Original Flowchart and Wireframe</h3>
 
-![database_structure](static/documentations/database_structure.png)
+![database_structure](static/documentation/database_structure.png)
 
 <p>Checkout app and Order app was added later during the coding process.</p>
 
@@ -192,7 +192,7 @@
 
 [Instagram page: Traverse Book](https://www.instagram.com/traverse.bookreader?igsh=MXR2dnF2ejB3aWM5bw==)
 
-![instagram_page](static/image/documentation/instagram_page.png)
+![instagram_page](static/image/documentation/instagram_page.jpg)
 
 <h3>Subscription News letter</h3>
 
