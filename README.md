@@ -130,13 +130,20 @@
 
 <li> The initial idea of this online bookshop comes from my personal experience as a multilingual reader living in UK. It is observable that not enough source of selling books of different languages available in English speaking countries. The title of the page “Traverse Book” wishes to represent the idea to traverse the language and cultural border and encompass more books from different languages, genre, and covers.</li>
 
-<li>To achieve that, I have tried to input books of different languages apart from English such as Chinese, France, Japanese in order to make this available. There will be room for further development if there is more stock in my knowledge.</li>
+<li>Online bookshop is quite prevalent in the book market in anglophonic world, but it is not that common for online bookshop that sells books of different languages. In views of this developing market when more migration is happening from Asia to European countries. Traverse Book hopes to grasp the market gap of providing mulitlingual online book store to readers from different background. It will be the specification that differentiates Traverse Book from competitors. </li>
+
+<li>To achieve that, I have tried to input books of different languages apart from English such as Chinese, French, Japanese in order to make this available. There will be room for further development if there is more stock in my knowledge.</li>
+
+<li>Traverse Book also serves similar to an indepenedent bookstore which is small in size but more flexible in choosing books and user-oriented by enabling customer to add their book interest and recommendation in the customer profile page which will enable user to advise on our stocks.</li>
+
+<li>Therefore, the target audience of Traverse book includes general readers in Anglophonic world and the bilingual or multilingual foreign readers to provide unque, tailored and convenient book purchase experience.</li>
 
 <h2>Marketing Strategy</h2>
 
 <h3>Facebook page</h3>
 
 <li>A facebook page has been mocked up with the product image as an icon for future promotion and the link to the page has been attached in the icon of the footer.</li>
+<li>The facebook page acts as a medium to attract user to our website to view products and activity promotion.</li>
 
 <h3>Instagram: Reader instagram</h3>
 
