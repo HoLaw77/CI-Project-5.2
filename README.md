@@ -148,7 +148,7 @@
 
 ![edit_and_delete_order](static/image/documentation/edit_and_delete_order.png)
 
-![remove_successful](static/image/documentation/remove_succeful.png)
+![remove_successful](static/image/documentation/remove_successful.png)
 
 <h2>Development</h2>
 <h3> Original Flowchart and Wireframe</h3>
