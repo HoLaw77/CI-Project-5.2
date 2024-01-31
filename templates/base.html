@@ -152,8 +152,8 @@
 
     {% if messages %}
     <div class="message-container">
-        <div class="row">
-            <div class="col-12 ml-6">
+        
+            <div class="col-lg-12 col-lg-6">
                     
             {% for message in messages %}
             {% with message.level as level %}
@@ -169,7 +169,7 @@
             {% endwith %}
             {% endfor %}
             </div>
-        </div>
+        
     </div>
 {% endif %}
 
