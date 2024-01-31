@@ -164,8 +164,8 @@ def checkout_success(request, order_number):
     f'Order successfully processed. Order number is {order_number}. \
     A confirmation email will be send to {order.email}')
 
-    if 'item' in request.session:
-        del request.session['item']
+    if 'bag' in request.session:
+        del request.session['bag']
         
 
     template = 'checkout/checkout_success.html'
