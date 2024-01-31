@@ -339,6 +339,12 @@
 </tbody>
 </table>
 
+<h2>Future Development Possibility</h2>
+
+<li>Adding Description in Book detail page to let customer read a summary of the book</li>
+<li>Add News and Activity in Nav bar to store activities such as Book club</li>
+<li>Development Function to Filter books based on genre and language</li>
+
 <h2>Testing</h2>
 <li>I tested that this page works in different browser such as: Chrome, Microsoft-edge, Firefox.</li>
 <li>I confirmed the project is responsive, look goods and function on all standard size screen using devtool device tool bar.</li>
