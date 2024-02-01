@@ -155,6 +155,27 @@
 
 ![database_structure](static/image/documentation/database_structure.png)
 
+<h3>Wireframe Home</h3>
+
+<p>Initially, the wireframe for home is inspired by the ocean-book-glass 
+background image and the font Times New Roman, the setting of start Looking for 
+books hopes to create a visual effect of attracting customer to click inside with
+the white color font but it is a bit hard to be visible so changed to black text with
+white background, with hover color-changing effect.</p>
+
+![wireframe_home](static/image/documentation/initial_wireframe_home.png)
+
+<h3></h3>
+
+<p>The book page wireframe have more modification because it is different for 
+screen size in word document compare to actual code styling with bootstrap, but
+the idea to have 2 to 3 books in a row has been set, the book cover is set to be 
+with hyperlink into book details and only print out basic information in the book.html page
+to avoid the information becoming too crowd.</p>
+
+![wireframe_book](static/image/documentation/wireframe_book_page.png)
+
+
 <p>Checkout app and Order app was added later during the coding process.</p>
 
 ![flow_chart](static/image/documentation/flowchart.png)
