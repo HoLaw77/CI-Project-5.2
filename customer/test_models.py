@@ -7,10 +7,7 @@ class TestCustomerModel(TestCase):
     def setUp(self):
         """Set up data for testing"""
         
-        if existing_user:
-            print(f"The username 'existing_username' already exists.")
-        else:
-            pass
+        
         # Create a new User instance
         self.user_instance = User.objects.create(username="hibye", password="whatEver!")
 
