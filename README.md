@@ -29,6 +29,14 @@
 
 ![sign_up](static/image/documentation/sign_up.png)
 
+<h3>Sign Up Confirmation Email </h3>
+
+![sign_up_email_title](static/image/documentation/sign_up_email_title.png)
+
+![sign_up_email_content](static/image/documentation/sign_up_email_content.png)
+
+<p>(It is a forward email from my friend who helps to test this functionality, for privacy consideration, the email address is blackened.)</p>
+
 <h3>Navigation Bar at home page</h3>
 
 ![navigation_bar](static/image/documentation/topnav.png)
