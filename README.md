@@ -63,6 +63,8 @@
 <h3>In-page promotion</h3>
 <li>In the top nav bar, there is a statement promoting delivery available and it only counts 5% of the total price to let the user know before making any purchase.</li>
 
+<li>Using the quote from George R.R. Martin, the author of A Song of Ice and Fire: "A reader lives a thousand lives before he dies and the one who doesn't read, lives just one." to promote the idea of reading is able to traverse our life experience, also echoing the title of the webpage Traverse Book.</li>
+
 ![top nav bar](static/image/documentation/topnav.png)
 
 <h3>SEO and Keyword</h3>
