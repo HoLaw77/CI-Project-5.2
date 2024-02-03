@@ -20,15 +20,20 @@ def cache_checkout_data(request):
     try:
         payintentid = request.POST.get('client_secret').split('_secret')[0]
         stripe.api_key = settings.STRIPE_SECRET_KEY
+
+        user_id = request.user.id if request.user.is_authenticated else 0
+
         stripe.PaymentIntent.modify(payintentid, metadata={
             'bag': json.dumps(request.session.get('bag', {})),
             'save-info': request.POST.get('save_info'),
-            'username': request.user.id,
+            'username': user_id,
         })
+
         return HttpResponse(status=200)
     except Exception as e:
         messages.error(request, 'Sorry, your order cannot be processed right now. Please try again.')
-        return HttpResponse(content=e, status=404)
+        return HttpResponse(content=str(e), status=404)
+
 
 def checkout(request):
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
@@ -138,35 +143,41 @@ def checkout_success(request, order_number):
     """Handle request when checkout successfully"""
 
     save_info = request.session.get("save-info")
-    order = get_object_or_404(Order, order_number = order_number)
+    order = get_object_or_404(Order, order_number=order_number)
 
-    profile = Profile.objects.get(user=request.user)
-    #linking user profile to order
-    order.profile = profile
-    order.save()
-    if save_info:
-        profile_data = {
-        "full_name": order.full_name,  
-        "email": order.email, 
-        "phone_number": order.phone_number, 
-        "address1": order.address1, 
-        "address2": order.address2, 
-        "postcode": order.postcode, 
-        "country": order.country,
-        }
+    if request.user.is_authenticated:
+        try:
+            profile = Profile.objects.get(user=request.user)
+            order.profile = profile
+            order.save()
+
+            if save_info:
+                profile_data = {
+                    "full_name": order.full_name,
+                    "email": order.email,
+                    "phone_number": order.phone_number,
+                    "address1": order.address1,
+                    "address2": order.address2,
+                    "postcode": order.postcode,
+                    "country": order.country,
+                }
+                confirm_order_form = ProfileForm(profile_data, instance=profile)
+                if confirm_order_form.is_valid():
+                    confirm_order_form.save()
+
+        except Profile.DoesNotExist:
+            messages.warning(request, "No user profile found.")
     else:
-        profile_data = {}
-    confirm_order_form = ProfileForm(profile_data, instance=profile)
-    if confirm_order_form.is_valid():
-        confirm_order_form.save()
+        messages.warning(request, "User is not authenticated.")
 
-    messages.success(request, 
-    f'Order successfully processed. Order number is {order_number}. \
-    A confirmation email will be send to {order.email}')
+    messages.success(
+        request,
+        f'Order successfully processed. Order number is {order_number}. \
+        A confirmation email will be sent to {order.email}'
+    )
 
     if 'bag' in request.session:
         del request.session['bag']
-        
 
     template = 'checkout/checkout_success.html'
     context = {
@@ -175,7 +186,7 @@ def checkout_success(request, order_number):
     }
     confirmation_email(order_number)
     print('email sent')
-    return render (request, template, context) 
+    return render(request, template, context)
 
 def confirmation_email(order_number):
     """Send confirmation email for customer after payment"""
