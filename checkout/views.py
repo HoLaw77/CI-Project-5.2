@@ -209,7 +209,7 @@ def confirmation_email(order_number):
         plain_message = strip_tags(html_message)
         
         from_email = 'howanlaw707@gmail.com'
-        recipient_list = [customer.email]
+        recipient_list = [customer_email]
         
         send_mail(subject, plain_message, from_email, recipient_list, 
         fail_silently=False)
