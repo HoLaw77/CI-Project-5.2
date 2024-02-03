@@ -391,6 +391,7 @@ to avoid the information becoming too crowd.</p>
 
 <h2>Manual Testing</h2>
 
+<li>User Story</li>
 <table>
 <thead>
     <tr>
@@ -505,6 +506,28 @@ to avoid the information becoming too crowd.</p>
     </td>
     </tr>
 </tbody>
+</table>
+
+<li>Other functionality testing</li>
+<table>
+    <thead>
+    <tr>
+    <th>Functionality</th>
+    <th>Result</th>
+    </tr>
+    </thead>
+    <tr>
+    <td>Sending register email</td>
+    <td>Available (Please see the signup page session for the email)</td>
+    </tr>
+    <tr>
+    <td>Sending Email regardless of user has profile or not</td>
+    <td>Available (Please see the checkout session)</td>
+    </tr>
+    <tr>
+    <td>User able to view order history from profile</td>
+    <td>Available (Please see the order history session)</td>
+    </tr>
 </table>
 
 <h2>Automated Testing</h2>
