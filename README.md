@@ -13,11 +13,21 @@
 
 </p>
 
+<h2>Marketing Strategy</h2>
+
 <h2>Market Research</h2>
+
+<p>Online bookshop belongs to a B2C business model which sells product directly to customer</p>
+
+<h3>Initial Idea</h3>
 
 <li> The initial idea of this online bookshop comes from my personal experience as a multilingual reader living in UK. It is observable that not enough source of selling books of different languages available in English speaking countries. The title of the page “Traverse Book” wishes to represent the idea to traverse the language and cultural border and encompass more books from different languages, genre, and covers.</li>
 
+<h3>Target Audience and markets</h3>
+
 <li>Online bookshop is quite prevalent in the book market in anglophonic world, but it is not that common for online bookshop that sells books of different languages. In views of this developing market when more migration is happening from Asia to European countries. Traverse Book hopes to grasp the market gap of providing mulitlingual online book store to readers from different background. It will be the specification that differentiates Traverse Book from competitors. </li>
+
+<h3>Features meeting audiences' expectations</h3>
 
 <li>To achieve that, I have tried to input books of different languages apart from English such as Chinese, French, Japanese in order to make this available. There will be room for further development if there is more stock in my knowledge.</li>
 
@@ -25,7 +35,7 @@
 
 <li>Therefore, the target audience of Traverse book includes general readers in Anglophonic world and the bilingual or multilingual foreign readers to provide unque, tailored and convenient book purchase experience.</li>
 
-<h2>Marketing Strategy</h2>
+<h2>Social media and Promotion</h2>
 
 <h3>Facebook page</h3>
 
@@ -501,7 +511,20 @@ to avoid the information becoming too crowd.</p>
 <h2>Automated Testing</h2>
 
 <h3>Covered app:</h3>
-<li></li>
+<li>Product app: models.py</li>
+<li>Product app: views.py</li>
+<li>Order app: views.py</li>
+<li>Home app: views.py</li>
+<li>Customer app: forms.py</li>
+<li>Customer app: models.py</li>
+<li>Customer app: views.py</li>
+<li>Checkout app: forms.py</li>
+<li>Checkout app: models.py</li>
+
+
+
+
+
 
 <h2>HTML Validation</h2>
 
