@@ -1,33 +1,86 @@
-// ... (previous code)
+/*
+    Core logic/payment flow for this comes from here:
+    https://stripe.com/docs/payments/accept-a-payment
 
-stripe.confirmCardPayment(clientSecret, {
-    payment_method: {
-        card: card,
+    CSS from here: 
+    https://stripe.com/docs/stripe-js
+*/
+
+var stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+var clientSecret = $('#id_client_secret').text().slice(1, -1);
+var stripe = Stripe(stripePublicKey);
+var elements = stripe.elements();
+var style = {
+    base: {
+        color: '#000',
+        fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+        fontSmoothing: 'antialiased',
+        fontSize: '16px',
+        '::placeholder': {
+            color: '#aab7c4'
+        }
+    },
+    invalid: {
+        color: '#dc3545',
+        iconColor: '#dc3545'
     }
-}).then(function (result) {
-    if (result.error) {
-        var errorDiv = document.getElementById('card-errors');
+};
+var card = elements.create('card', { style: style });
+card.mount('#card-element');
+
+// Handle realtime validation errors on the card element
+card.addEventListener('change', function (event) {
+    var errorDiv = document.getElementById('card-errors');
+    if (event.error) {
         var html = `
             <span class="icon" role="alert">
                 <i class="fas fa-times"></i>
             </span>
-            <span>${result.error.message}</span>`;
+            <span>${event.error.message}</span>
+        `;
         $(errorDiv).html(html);
-        $('#payment-form').fadeToggle(100);
-
-        card.update({ 'disabled': false });
-        $('#submit-button').attr('disabled', false);
     } else {
-        // Check if result.paymentIntent is defined before accessing its properties
-        if (result.paymentIntent && result.paymentIntent.status === 'succeeded') {
-            form.submit();
-        }
+        errorDiv.textContent = '';
     }
-}).catch(function (error) {
-    console.error("Error confirming card payment:", error);
-    // Handle error as needed
-    // You might want to display an error message to the user or log the error for debugging
-    // Instead of location.reload(), you can handle the error in a way that fits your application
-}).finally(function () {
-    // Additional code that should run regardless of success or failure
+});
+
+// Handle form submit
+var form = document.getElementById('payment-form');
+
+form.addEventListener('submit', function (ev) {
+    ev.preventDefault();
+    card.update({ 'disabled': true });
+    $('#submit-button').attr('disabled', true);
+    $('#payment-form').fadeToggle(100);
+
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function (result) {
+        if (result.error) {
+            var errorDiv = document.getElementById('card-errors');
+            var html = `
+                    <span class="icon" role="alert">
+                    <i class="fas fa-times"></i>
+                    </span>
+                    <span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            $('#payment-form').fadeToggle(100);
+
+            card.update({ 'disabled': false });
+            $('#submit-button').attr('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    }).catch(function (error) {
+        console.error("Error confirming card payment:", error);
+        // Handle error as needed
+        // You might want to display an error message to the user or log the error for debugging
+        // Instead of location.reload(), you can handle the error in a way that fits your application
+    }).finally(function () {
+        // Additional code that should run regardless of success or failure
+    });
 });
