@@ -192,7 +192,7 @@ def confirmation_email(order_number):
     """Send confirmation email for customer after payment"""
     try:
         order = get_object_or_404(Order, order_number=order_number)
-        customer = order.profile.user
+        customer_email = order.email
         order_number = order_number
         overall_total = order.overall_total
         date = order.date

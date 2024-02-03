@@ -77,10 +77,9 @@ form.addEventListener('submit', function (ev) {
         }
     }).catch(function (error) {
         console.error("Error confirming card payment:", error);
-        // Handle error as needed
-        // You might want to display an error message to the user or log the error for debugging
-        // Instead of location.reload(), you can handle the error in a way that fits your application
+        
+        
     }).finally(function () {
-        // Additional code that should run regardless of success or failure
+        
     });
 });
