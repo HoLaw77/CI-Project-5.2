@@ -147,8 +147,10 @@
 
 <h3>Order History Section</h3>
 
-![order_histoy](static/image/documentation/order_history.png)
+<li>When clicking into the order number, it can lead the user into that particular order.</li>
 
+![order_histoy](static/image/documentation/order_history.png)
+![order_history](static/image/documentation/order_history_link.png)
 <h3>Promote Social media at the bottom</h3>
 
 ![social_media_link](static/image/documentation/social_media_link.png)
