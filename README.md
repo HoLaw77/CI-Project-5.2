@@ -76,6 +76,8 @@
 <li>Color: I deliberately picked white background and black font color as minimalist style. </li>
 <li>Font: The font Gideon Roman is picked as the font-family of most of the word in the page because it looks similar to Time New Roman in word and it is a traditional and classic style of font that looks like bookshop or bookish people will sync with.</li>
 
+![logo](static/image/documentation/logo.png)
+
 <h2>How to Make Order</h2>
 
 <li>User can choose to sign in or register first, then they can navigate to the book page and make their order by clicking into the book_detail page. It will lead them to the details of the books such as authors, ISBN, publisher, page numbers. They can make their order by clicking the add to cart button.</li> 
