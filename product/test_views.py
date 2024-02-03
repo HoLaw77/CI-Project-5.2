@@ -28,7 +28,7 @@ class Test_Views(TestCase):
 
     def test_book_detail_view(self):
         """Test book_detail can render the correct book"""
-        book = Product.objects.create(product= self.product)
+        book = self.product
         book.save()
         response = self.client.get(f'/book_detail/{self.product}')
         self.assertEqual(book.name, "La vie")

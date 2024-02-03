@@ -74,3 +74,5 @@ class TestCheckoutModel(TestCase):
         order = Order.objects.get(full_name='test')
         order.save()
         self.assertIsNotNone(order.order_number)
+
+    
