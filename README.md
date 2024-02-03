@@ -13,6 +13,59 @@
 
 </p>
 
+<h2>Market Research</h2>
+
+<li> The initial idea of this online bookshop comes from my personal experience as a multilingual reader living in UK. It is observable that not enough source of selling books of different languages available in English speaking countries. The title of the page “Traverse Book” wishes to represent the idea to traverse the language and cultural border and encompass more books from different languages, genre, and covers.</li>
+
+<li>Online bookshop is quite prevalent in the book market in anglophonic world, but it is not that common for online bookshop that sells books of different languages. In views of this developing market when more migration is happening from Asia to European countries. Traverse Book hopes to grasp the market gap of providing mulitlingual online book store to readers from different background. It will be the specification that differentiates Traverse Book from competitors. </li>
+
+<li>To achieve that, I have tried to input books of different languages apart from English such as Chinese, French, Japanese in order to make this available. There will be room for further development if there is more stock in my knowledge.</li>
+
+<li>Traverse Book also serves similar to an indepenedent bookstore which is small in size but more flexible in choosing books and user-oriented by enabling customer to add their book interest and recommendation in the customer profile page which will enable user to advise on our stocks.</li>
+
+<li>Therefore, the target audience of Traverse book includes general readers in Anglophonic world and the bilingual or multilingual foreign readers to provide unque, tailored and convenient book purchase experience.</li>
+
+<h2>Marketing Strategy</h2>
+
+<h3>Facebook page</h3>
+
+<li>A facebook page has been mocked up with the product image as an icon for future promotion and the link to the page has been attached in the icon of the footer.</li>
+<li>The facebook page acts as a medium to attract user to our website to view products and activity promotion.</li>
+
+[Facebook page](https://www.facebook.com/people/Traverse-Book/61554559140023/)
+
+![facebook_page](static/image/documentation/facebook_page.png)
+
+<h3>Instagram: Reader instagram</h3>
+
+<li>In view of the trend of bookstagram which means using Instagram account to share books, reviews and comment. I have mocked up an instagram account with a bilingual book review written as an experiment for future activity such as book club as a promotion.</li>
+
+[Instagram page: Traverse Book](https://www.instagram.com/traverse.bookreader?igsh=MXR2dnF2ejB3aWM5bw==)
+
+![instagram_page](static/image/documentation/instagram_page.jpg)
+
+<h3>Subscription Newsletter</h3>
+
+<li>A pop-up subscription form is also built using MailChimp to mock up a news letter subscription functionality to keep user updated for the new book in the shop.</li>
+
+![newsletter pop-up form](static/image/documentation/newsletter_subscription_form.png)
+
+<h3>In-page promotion</h3>
+<li>In the top nav bar, there is a statement promoting delivery available and it only counts 5% of the total price to let the user know before making any purchase.</li>
+
+![top nav bar](static/image/documentation/topnav.png)
+
+<h3>SEO and Keyword</h3>
+
+<li>I have added the genre of books we offer in the HTML head element tag to enrich the SEO performance of my page. The logic behind is to capture the keyword when reader is looking for particular subject or genre of books</li>
+
+![SEO Keyword and Description](static/image/documentation/seo_description_and_keyword.png)
+
+<h3>Visual Design</h3>
+
+<li>Color: I deliberately picked white background and black font color as minimalist style. </li>
+<li>Font: The font Gideon Roman is picked as the font-family of most of the word in the page because it looks similar to Time New Roman in word and it is a traditional and classic style of font that looks like bookshop or bookish people will sync with.</li>
+
 <h2>How to Make Order</h2>
 
 <li>User can choose to sign in or register first, then they can navigate to the book page and make their order by clicking into the book_detail page. It will lead them to the details of the books such as authors, ISBN, publisher, page numbers. They can make their order by clicking the add to cart button.</li> 
@@ -192,58 +245,6 @@ to avoid the information becoming too crowd.</p>
 <li>After doing more research and building the page, I realise that it would be too complicated so I simplified by only keeping the search bar.</li>
 <li>I have also added a login and sign off function using django allauth functionality.</li>
 
-<h2>Market Research</h2>
-
-<li> The initial idea of this online bookshop comes from my personal experience as a multilingual reader living in UK. It is observable that not enough source of selling books of different languages available in English speaking countries. The title of the page “Traverse Book” wishes to represent the idea to traverse the language and cultural border and encompass more books from different languages, genre, and covers.</li>
-
-<li>Online bookshop is quite prevalent in the book market in anglophonic world, but it is not that common for online bookshop that sells books of different languages. In views of this developing market when more migration is happening from Asia to European countries. Traverse Book hopes to grasp the market gap of providing mulitlingual online book store to readers from different background. It will be the specification that differentiates Traverse Book from competitors. </li>
-
-<li>To achieve that, I have tried to input books of different languages apart from English such as Chinese, French, Japanese in order to make this available. There will be room for further development if there is more stock in my knowledge.</li>
-
-<li>Traverse Book also serves similar to an indepenedent bookstore which is small in size but more flexible in choosing books and user-oriented by enabling customer to add their book interest and recommendation in the customer profile page which will enable user to advise on our stocks.</li>
-
-<li>Therefore, the target audience of Traverse book includes general readers in Anglophonic world and the bilingual or multilingual foreign readers to provide unque, tailored and convenient book purchase experience.</li>
-
-<h2>Marketing Strategy</h2>
-
-<h3>Facebook page</h3>
-
-<li>A facebook page has been mocked up with the product image as an icon for future promotion and the link to the page has been attached in the icon of the footer.</li>
-<li>The facebook page acts as a medium to attract user to our website to view products and activity promotion.</li>
-
-[Facebook page](https://www.facebook.com/people/Traverse-Book/61554559140023/)
-
-![facebook_page](static/image/documentation/facebook_page.png)
-
-<h3>Instagram: Reader instagram</h3>
-
-<li>In view of the trend of bookstagram which means using Instagram account to share books, reviews and comment. I have mocked up an instagram account with a bilingual book review written as an experiment for future activity such as book club as a promotion.</li>
-
-[Instagram page: Traverse Book](https://www.instagram.com/traverse.bookreader?igsh=MXR2dnF2ejB3aWM5bw==)
-
-![instagram_page](static/image/documentation/instagram_page.jpg)
-
-<h3>Subscription Newsletter</h3>
-
-<li>A pop-up subscription form is also built using MailChimp to mock up a news letter subscription functionality to keep user updated for the new book in the shop.</li>
-
-![newsletter pop-up form](static/image/documentation/newsletter_subscription_form.png)
-
-<h3>In-page promotion</h3>
-<li>In the top nav bar, there is a statement promoting delivery available and it only counts 5% of the total price to let the user know before making any purchase.</li>
-
-![top nav bar](static/image/documentation/topnav.png)
-
-<h3>SEO and Keyword</h3>
-
-<li>I have added the genre of books we offer in the HTML head element tag to enrich the SEO performance of my page. The logic behind is to capture the keyword when reader is looking for particular subject or genre of books</li>
-
-![SEO Keyword and Description](static/image/documentation/seo_description_and_keyword.png)
-
-<h3>Visual Design</h3>
-
-<li>Color: I deliberately picked white background and black font color as minimalist style. </li>
-<li>Font: The font Gideon Roman is picked as the font-family of most of the word in the page because it looks similar to Time New Roman in word and it is a traditional and classic style of font that looks like bookshop or bookish people will sync with.</li>
 
 <h3>Agile approach in development </h3>
 
