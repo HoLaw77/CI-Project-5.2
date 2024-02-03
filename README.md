@@ -399,6 +399,7 @@ to avoid the information becoming too crowd.</p>
     <th>User Story</th>
     <th>Type of User needed</th>
     <th>Features in the project</th>
+    <th>Photo</th>
     </tr>
 </thead>
 <tbody>
@@ -432,7 +433,11 @@ to avoid the information becoming too crowd.</p>
     <p>As a reader living oversea, I am able to know about the price with delivery cost, so that I can pay without calculating it myself.</p>
     </td>
     <td>Reader living oversea</td>
-    <td>Order and Checkout Page shown 5% delivery cost</td>
+    <td>Order and Checkout Page shown 5% delivery cost
+    </td>
+    <td>
+    ![top nav bar](static/image/documentation/topnav.png)
+    </td>
     </tr>
     <tr>
     <td>
@@ -513,16 +518,12 @@ to avoid the information becoming too crowd.</p>
 <h3>Covered app:</h3>
 <li>Product app: models.py</li>
 <li>Product app: views.py</li>
-<li>Order app: views.py</li>
 <li>Home app: views.py</li>
 <li>Customer app: forms.py</li>
 <li>Customer app: models.py</li>
 <li>Customer app: views.py</li>
 <li>Checkout app: forms.py</li>
 <li>Checkout app: models.py</li>
-
-
-
 
 
 
