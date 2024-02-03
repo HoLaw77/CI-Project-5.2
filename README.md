@@ -391,15 +391,12 @@ to avoid the information becoming too crowd.</p>
 
 <h2>Manual Testing</h2>
 
-<li>USER STORY: </li>
-
 <table>
 <thead>
     <tr>
     <th>User Story</th>
     <th>Type of User needed</th>
     <th>Features in the project</th>
-    <th>Photo</th>
     </tr>
 </thead>
 <tbody>
@@ -434,9 +431,6 @@ to avoid the information becoming too crowd.</p>
     </td>
     <td>Reader living oversea</td>
     <td>Order and Checkout Page shown 5% delivery cost
-    </td>
-    <td>
-    ![top nav bar](static/image/documentation/topnav.png)
     </td>
     </tr>
     <tr>
@@ -525,7 +519,7 @@ to avoid the information becoming too crowd.</p>
 <li>Checkout app: forms.py</li>
 <li>Checkout app: models.py</li>
 
-
+![coverage](static/image/documentation/coverage.png)
 
 <h2>HTML Validation</h2>
 
