@@ -63,12 +63,11 @@ class Test_Order_Views(TestCase):
             item_total=10,
             quantity=1,
         )
-
-        self.bag =         
-
+    
+        
     def test_show_order(self):
 
-        response = self.client.get('/order')
+        response = self.client.get('/order/')
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, 'order/order.html')
 
