@@ -21,7 +21,7 @@ import cloudinary.api
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-CSRF_TRUSTED_ORIGINS = ['https://8000-holaw77-ciproject52-946yf26nqxg.ws-eu107.gitpod.io']
+CSRF_TRUSTED_ORIGINS = ['https://8000-holaw77-ciproject52-946yf26nqxg.ws-eu108.gitpod.io']
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -32,7 +32,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = "DEBUG" in os.environ
 
-ALLOWED_HOSTS = ['8000-holaw77-ciproject52-946yf26nqxg.ws-eu107.gitpod.io', 
+ALLOWED_HOSTS = ['8000-holaw77-ciproject52-946yf26nqxg.ws-eu108.gitpod.io', 
 'ci-project5-4ad812effe24.herokuapp.com', 
 'https://ci-project5-4ad812effe24.herokuapp.com']
 
