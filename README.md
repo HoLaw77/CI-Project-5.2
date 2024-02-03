@@ -158,11 +158,11 @@
 
 <h2>How to view Order</h2>
 
-<li>User can click on the "View Your Order" button at the top right corner of the page to view and amend orders at navigation bar.</li>
+<li>User can click on the "View Your Cart" button at the top right corner of the page to view and amend orders at navigation bar.</li>
 
-<h3>View Your Order button</h3>
+<h3>View Your Cart button</h3>
 
-![view_your_order](static/image/documentation/view_your_order.png)
+![view_your_cart](static/image/documentation/view_your_cart.png)
 
 <h2>How to check out and make payment</h2>
 <li>User can check out by clicking the checkout button at the bottom of the order page.</li>
