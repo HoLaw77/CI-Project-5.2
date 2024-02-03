@@ -61,7 +61,8 @@ class TestModels(TestCase):
             publisher = "folio",
             author = "Romeo",
             number_of_pages = 4,
-            isbn = "9780099302780",)
+            isbn = "9780099302780",
+            price = 4,)
         book.save()
         saved_book = Product.objects.get(id=book.id) 
         self.assertEqual(saved_book.name, "La vie")
@@ -69,3 +70,4 @@ class TestModels(TestCase):
         self.assertEqual(saved_book.author, "Romeo")
         self.assertEqual(saved_book.number_of_pages, 4)
         self.assertEqual(saved_book.isbn, "9780099302780")
+        self.assertEqual(saved_book.price, 4)
