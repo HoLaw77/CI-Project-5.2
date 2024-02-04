@@ -97,7 +97,7 @@ def checkout(request):
                 currency = settings.STRIPE_CURRENCY,
             )
 
-            print(intent)
+            
 
         except stripe.error.StripeError as e:
             
@@ -185,7 +185,7 @@ def checkout_success(request, order_number):
         'order_number': order_number
     }
     confirmation_email(order_number)
-    print('email sent')
+    
     return render(request, template, context)
 
 def confirmation_email(order_number):
@@ -213,7 +213,7 @@ def confirmation_email(order_number):
         
         send_mail(subject, plain_message, from_email, recipient_list, 
         fail_silently=False)
-        print('email sent')
+        
 
     except Exception as e:
-        print(f'error, no email sent. {e}')
+        messages.warning(request, f"error, no email sent. {e}")
