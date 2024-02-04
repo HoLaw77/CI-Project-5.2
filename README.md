@@ -20,7 +20,7 @@
 3. [Home Page](#home-page)
    - [Sign In Page Session](#sign-in-page-session)
    - [Sign Up Page Session](#sign-up-page-session)
-   - [Navigation Bar At Home Page](#navigation-bar-at-home_page)
+   - [Navigation Bar At Home Page](#navigation-bar-at-home-page)
 4. [Book and Book Detail Page](#book-and-book-detail-page)
    - [How to Make an Order](#how-to-make-an-order)
    - [How to View Cart](#how-to-view-cart)
@@ -34,7 +34,7 @@
    - [Future Development Possibility](#future-development-possibility)
 7. [Testing](#testing)
       - [Manual Testing](#manual-testing)
-      - [Automated Testing](#automated-automated)
+      - [Automated Testing](#automated-testing)
       - [HTML Validation](#html-validation)
       - [CSS Validation](#css-validation)
       - [Bugs](#bugs)
@@ -638,11 +638,11 @@ to avoid the information becoming too crowd.</p>
 
 <li>Another bug when I am debugging remove order view is when there is only one book left in the bag, and it is impossible to remove book, because when the remove button is clicked, the add order view is triggered unintentionally. After a couple round of testing, I find out it is because I used the return redirect but not return redirect (reverse('order')) in my add order views. It is thereby solved </li>
 
-<p>lighthouse desktop</p>
+<p>Lighthouse Desktop</p>
 
 ![lighthouse_desktop](static/image/documentation/lighthouse_desktop.png)
 
-<p>lighthouse mobile</p>
+<p>Lighthouse Mobile</p>
 
 ![lighthouse_mobile](static/image/documentation/lighthouse_mobile.png)
 
