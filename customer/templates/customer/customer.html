@@ -58,7 +58,7 @@
                         {{order.order_number}}
                     </a>
                     </td>
-                    <td>{{order.date |dictsort:"date"}}</td>
+                    <td>{{order.date }}</td>
                     <td>
                         <ul>
                             {% for item in order.order_detail.all %}
