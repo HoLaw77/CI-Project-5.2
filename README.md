@@ -7,6 +7,39 @@
 ![responsiveness](static/image/documentation/responsiveness.png)
 
 
+<h2>Table of Content</h2>
+
+
+
+1. [Traverse Book](#traverse-book)
+2. [Marketing Strategy](#marketing-strategy)
+3. [Market Research](#market-research)
+   - [Social Media and Promotion](#social-media-and-promotion)
+   - [SEO and Keyword](#seo-and-keyword)
+   - [Visual Design](#visual-design)
+4. [Home Page](#home-page)
+   - [Sign In/Up Confirmation](#sign-inup-confirmation)
+   - [Navigation Bar](#navigation-bar)
+5. [Book and Book Detail Page](#book-and-book-detail-page)
+   - [How to Make an Order](#how-to-make-an-order)
+   - [How to View Cart](#how-to-view-cart)
+   - [How to Check Out and Make Payment](#how-to-check-out-and-make-payment)
+   - [How to Delete and Edit Order](#how-to-delete-and-edit-order)
+6. [Profile Page](#profile-page)
+7. [Development](#development)
+   - [Original Flowchart and Wireframe](#original-flowchart-and-wireframe)
+   - [Agile Approach in Development](#agile-approach-in-development)
+   - [User Story](#user-story)
+   - [Future Development Possibility](#future-development-possibility)
+8. [Testing](#testing)
+      - [Manual and Automated](#manual-and-automated)
+      - [HTML and CSS Validation](#html-and-css-validation)
+      - [Bugs and Their Solutions](#bugs-and-their-solutions)
+      - [Lighthouse Desktop and Mobile](#lighthouse-desktop-and-mobile)
+9. [Deployment](#deployment)
+10. [Credit](#credit)
+
+
 <p>
 
 [Traverse Book](https://ci-project5-4ad812effe24.herokuapp.com/) is a full-stack project that enables user to make order and payment on books of different genres, languages, and cover.
