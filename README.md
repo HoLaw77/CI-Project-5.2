@@ -148,7 +148,7 @@
 
 <li>User can navigate to the book page and make their order by clicking into the book_detail page. It will lead them to the details of the books such as authors, ISBN, publisher, page numbers. They can make their order by clicking the add to cart button in the book details page. </li> 
 
-<li>After clicking the add to cart button, it will lead them to the order page which they can see the price of the book and the total price after adding the delivery cost which is 5% of the total price. There is also a button for them to proceed to checkout if they want. Otherwise, they can head back to the book page by clicking the button “Keep” shopping.</li>
+<li>After clicking the add to cart button, it will lead them to the order page which they can see the price of the book and the total price after adding the delivery cost which is 5% of the total price. There is also a button for them to proceed to checkout if they want. Otherwise, they can head back to the book page by clicking the button “Keep shopping".</li>
 
 
 <h3>Add to cart button in book detail page</h3>
@@ -162,15 +162,6 @@
 ![order_page](static/image/documentation/order_page.png)
 
 <br>
-
-<h2>Profile page</h2>
-
-<li>The profile is only accessible by user who has account and logged in as clicking in the "My profile" link in the bottom of navigation bar.</li>
-<li>User can also edit their profile and share their book interest after they have created an account.</li>
-<li>After they have submitted the form. All the information will be saved and will be displayed whenever they are logged in for them to edit.</li>
-<li>If the user has ordered  items previously, it will be listed as a table at the bottom of the page at the "Order History section".</li>
-<li>When clicking into the order number, it will lead the user back to the checkout success page which they can view the order details.</li>
-<li>At the bottom of profile page, there are two links to connect the user to Facebook page and Instagram page as well in order to encourage them to connect and share and promote the bookstore at the same time.</li>
 
 <h2>How to view Cart</h2>
 
@@ -226,7 +217,6 @@
 ![email_order_link](static/image/documentation/email_order_link.png)
 
 
-
 <h2>How to Delete and Edit Order</h2>
 <li>User can delete order by clicking the remove button in each product in order page. After clicking it will remove the product and stay in the order page.</li>
 
@@ -238,6 +228,15 @@
 ![edit_and_delete_order](static/image/documentation/edit_and_delete_order.png)
 
 ![remove_successful](static/image/documentation/remove_successful.png)
+
+<h2>Profile page</h2>
+
+<li>The profile is only accessible by user who has account and logged in as clicking in the "My profile" link in the bottom of navigation bar.</li>
+<li>User can also edit their profile and share their book interest after they have created an account.</li>
+<li>After they have submitted the form. All the information will be saved and will be displayed whenever they are logged in for them to edit.</li>
+<li>If the user has ordered  items previously, it will be listed as a table at the bottom of the page at the "Order History section".</li>
+<li>When clicking into the order number, it will lead the user back to the checkout success page which they can view the order details.</li>
+<li>At the bottom of profile page, there are two links to connect the user to Facebook page and Instagram page as well in order to encourage them to connect and share and promote the bookstore at the same time.</li>
 
 <h3>My Profile in nav bar</h3>
 
