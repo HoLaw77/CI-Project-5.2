@@ -7,7 +7,7 @@
 ![responsiveness](static/image/documentation/responsiveness.png)
 
 
-<h2>Table of Content</h2>
+<h2>Table of Contents</h2>
 
 
 
