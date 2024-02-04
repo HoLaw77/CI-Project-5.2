@@ -60,6 +60,10 @@
 
 ![newsletter pop-up form](static/image/documentation/newsletter_subscription_form.png)
 
+<li>Successful MailChimp subscription record (No email sent as it is a mock-up form)</li>
+
+![mailchimp_result](static/image/documentation/mailchimp_result.png)
+
 <h3>In-page promotion</h3>
 <li>In the top nav bar, there is a statement promoting delivery available and it only counts 5% of the total price to let the user know before making any purchase.</li>
 
@@ -616,6 +620,7 @@ to avoid the information becoming too crowd.</p>
 <li>Newsletter popup form from MailChimp
 
 [MailChimp](https://mailchimp.com/landers/email-marketing-platform/?ds_c=DEPT_AOC_Google_Search_UK_EN_Brand_Acquire_Exact_MKAG_UK&ds_kids=p77184324956&ds_a_lid=kwd-2285511033&ds_cid=71700000112280664&ds_agid=58700008474313140&gad_source=1&gclid=EAIaIQobChMIqqah3vyEhAMVlJJQBh0TsgTuEAAYASAAEgLmNvD_BwE&gclsrc=aw.ds&currency=GBP)
+
 
 </li>sitemap.xml from xml-sitemaps
 
