@@ -88,10 +88,14 @@
 
 <li>The home page consists of three parts in structure: </li>
 
-<ol>the top navigation bar with four buttons: home, books, login/signup (logout when user is authenticated), and view your cart
-. Also a My profile link and 5% delivery cost statement are displayed </ol>
-<ol>underneath, there are a statement quote and background image for promotion, the start looking for book button is another link for user to click into the books page</ol>
-<ol>The footer part includes social media icons and privacy policy</ol>
+<ol>
+
+<li>the top navigation bar with four buttons: home, books, login/signup (logout when user is authenticated), and view your cart
+. Also a My profile link and 5% delivery cost statement are displayed </li>
+<li>underneath, there are a statement quote and background image for promotion, the start looking for book button is another link for user to click into the books page</li>
+<li>The footer part includes social media icons and privacy policy</li>
+
+</ol>
 
 <h3>Home page overview</h3>
 
