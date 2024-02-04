@@ -297,7 +297,7 @@
 
 <h2>Development</h2>
 
-<h2> Original Flowchart And Wireframe</h2>
+<h2>Original Flowchart And Wireframe</h2>
 
 ![database_structure](static/image/documentation/database_structure.png)
 
@@ -331,7 +331,7 @@ to avoid the information becoming too crowd.</p>
 <li>I have also added a login and sign off function using django allauth functionality.</li>
 
 
-<h2>Agile approach In development </h2>
+<h2>Agile approach In development</h2>
 
 ![agile_example](static/image/documentation/agile_example.png)
 
