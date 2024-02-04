@@ -220,15 +220,15 @@
 
 <h3>Payment form</h3>
 
-<h4>Order Summary</h4>
+<h3>Order Summary</h3>
 
 ![payment_form_order_summary](static/image/documentation/payment_form_order_summary.png)
 
-<h4>Contact and Delivery Information</h4>
+<h3>Contact and Delivery Information</h3>
 
 ![payment_form_form_fields](static/image/documentation/payment_form_form_fields.png)
 
-<h4>Card Payment Details</h4>
+<h3>Card Payment Details</h3>
 
 ![payment_form_card](static/image/documentation/payment_form_card.png)
 
@@ -701,11 +701,11 @@ to avoid the information becoming too crowd.</p>
 
 <h3>Media</h3>
 
-<h4>Index.html</h4>
+<h3>Index.html</h3>
 <p>https://pxhere.com/en/photo/105434/</p>
 <p>https://toistudent.timesofindia.indiatimes.com/news/bookmark/a-reader-lives-a-thousand-lives/5748.html#:~:text=%22A%20reader%20lives%20a%20thousand,kept%20close%20to%20my%20heart.</p>
 
-<h4>book.html</h4>
+<h3>book.html</h3>
 
 
 <p>https://www.amazon.co.uk/Runaway-Vintage-International-Alice-Munro/dp/1400077915</p>
