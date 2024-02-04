@@ -38,8 +38,7 @@
       - [HTML Validation](#html-validation)
       - [CSS Validation](#css-validation)
       - [Bugs](#bugs)
-      - [Lighthouse Desktop](#lighthouse-desktop)
-      - [Lighthouse Mobile](#lighthouse-mobile)
+      - [Lighthouse Desktop And Mobile](#lighthouse-desktop-and-mobile)
 8. [Deployment](#deployment)
 9. [Credit](#credit)
 
@@ -637,6 +636,8 @@ to avoid the information becoming too crowd.</p>
 <li>When I am debugging the error of remove and adjust order view, I realise the issue is because of the item_id is different in data type in the context, so I unify it by adding a str(item_id). Thanks for tutor's help in troubleshooting.</li>
 
 <li>Another bug when I am debugging remove order view is when there is only one book left in the bag, and it is impossible to remove book, because when the remove button is clicked, the add order view is triggered unintentionally. After a couple round of testing, I find out it is because I used the return redirect but not return redirect (reverse('order')) in my add order views. It is thereby solved </li>
+
+<h2>Lighthouse Desktop And Mobile</h2>
 
 <p>Lighthouse Desktop</p>
 
