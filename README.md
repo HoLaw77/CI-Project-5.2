@@ -84,19 +84,24 @@
 
 ![logo](static/image/documentation/logo.png)
 
-<h2>How to Make Order</h2>
+<h2>Home Page</h2>
 
-<li>User can choose to sign in or register first, then they can navigate to the book page and make their order by clicking into the book_detail page. It will lead them to the details of the books such as authors, ISBN, publisher, page numbers. They can make their order by clicking the add to cart button.</li> 
+<li>The home page consists of three parts in structure: </li>
 
-<li>User can also filter by searching the book they like by typing the name, author, or other keywords in the search bar and clicking on the sort dropdown to sort the book by name or price in ascending or descending order. </li>
+<ol>the top navigation bar with four buttons: home, books, login/signup (logout when user is authenticated), and view your cart
+. Also a My profile link and 5% delivery cost statement are displayed </ol>
+<ol>underneath, there are a statement quote and background image for promotion, the start looking for book button is another link for user to click into the books page</ol>
+<ol>The footer part includes social media icons and privacy policy</ol>
 
-<li>After clicking the add to cart button, it will lead them to the order page which they can see the price of the book and the total price after adding the delivery cost which is 5% of the total price. There is also a button for them to proceed to checkout if they want. Otherwise, they can head back to the book page by clicking the button “Keep” shopping.</li>
+<h3>Home page overview</h3>
 
-<h3>Sign In page</h3>
+![home_page_overview](static/image/documentation/home_page_overview.png)
+
+<h3>Sign In page Session</h3>
 
 ![sign_in](static/image/documentation/sign_in.png)
 
-<h3>Sign Up page</h3>
+<h3>Sign Up page session</h3>
 
 ![sign_up](static/image/documentation/sign_up.png)
 
@@ -112,8 +117,20 @@
 
 ![navigation_bar](static/image/documentation/topnav.png)
 
+<h2>Book and Book Detail
 
-<h3>Search Bar at book page</h3>
+<li>In the books page, it includes a search bar for user to search the book name, author and isbn information, beneath is a sort bar enable user to sort books according to alphabetical ascending or descending order</li>
+<li>User can click into the book title or book photo to view the book details in book detail pages.</li>
+
+<h3>Books page overview</h3>
+
+![books_page_overview](static/image/documentation/books_page_overview.png)
+
+<h3>Book Detail page overview</h3>
+
+![book_detail_page_overview](static/image/documentation/book_detail_page_overview.png)
+
+<h3>Search Bar at Books page</h3>
 
 ![search_bar](static/image/documentation/search_bar.png)
 
@@ -121,6 +138,13 @@
 </h3>
 
 ![sort](static/image/documentation/sort.png)
+
+<h2>How to make an order</h2>
+
+<li>User can navigate to the book page and make their order by clicking into the book_detail page. It will lead them to the details of the books such as authors, ISBN, publisher, page numbers. They can make their order by clicking the add to cart button in the book details page. </li> 
+
+<li>After clicking the add to cart button, it will lead them to the order page which they can see the price of the book and the total price after adding the delivery cost which is 5% of the total price. There is also a button for them to proceed to checkout if they want. Otherwise, they can head back to the book page by clicking the button “Keep” shopping.</li>
+
 
 <h3>Add to cart button in book detail page</h3>
 
@@ -143,28 +167,7 @@
 <li>When clicking into the order number, it will lead the user back to the checkout success page which they can view the order details.</li>
 <li>At the bottom of profile page, there are two links to connect the user to Facebook page and Instagram page as well in order to encourage them to connect and share and promote the bookstore at the same time.</li>
 
-<h3>My Profile in nav bar</h3>
-
-![my_profile](static/image/documentation/my_profile.png)
-
-
-<h3>Profile and Book Interest form</h3>
-
-![profile_page](static/image/documentation/profile_form.png)
-![book_interest](static/image/documentation/book_interest.png)
-
-<h3>Order History Section</h3>
-
-<li>When clicking into the order number, it can lead the user into that particular order.</li>
-
-![order_histoy](static/image/documentation/order_history.png)
-![order_history](static/image/documentation/order_history_link.png)
-<h3>Promote Social media at the bottom</h3>
-
-![social_media_link](static/image/documentation/social_media_link.png)
-
-
-<h2>How to view Order</h2>
+<h2>How to view Cart</h2>
 
 <li>User can click on the "View Your Cart" button at the top right corner of the page to view and amend orders at navigation bar.</li>
 
@@ -230,6 +233,26 @@
 ![edit_and_delete_order](static/image/documentation/edit_and_delete_order.png)
 
 ![remove_successful](static/image/documentation/remove_successful.png)
+
+<h3>My Profile in nav bar</h3>
+
+![my_profile](static/image/documentation/my_profile.png)
+
+
+<h3>Profile and Book Interest form</h3>
+
+![profile_page](static/image/documentation/profile_form.png)
+![book_interest](static/image/documentation/book_interest.png)
+
+<h3>Order History Section</h3>
+
+<li>When clicking into the order number, it can lead the user into that particular order.</li>
+
+![order_histoy](static/image/documentation/order_history.png)
+![order_history](static/image/documentation/order_history_link.png)
+<h3>Promote Social media at the bottom</h3>
+
+![social_media_link](static/image/documentation/social_media_link.png)
 
 <h2>Development</h2>
 <h3> Original Flowchart and Wireframe</h3>
