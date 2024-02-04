@@ -159,7 +159,7 @@
 
 ![navigation_bar](static/image/documentation/topnav.png)
 
-<h2>Book And Book Detail Page </h2>
+<h2>Book And Book Detail Page</h2>
 
 <li>In the books page, it includes a search bar for user to search the book name, author and isbn information, beneath is a sort bar enable user to sort books according to alphabetical ascending or descending order</li>
 <li>User can click into the book title or book photo to view the book details in book detail pages.</li>
