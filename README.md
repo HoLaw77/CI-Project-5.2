@@ -20,7 +20,7 @@
 3. [Home Page](#home-page)
    - [Sign In Page Session](#sign-in-page-session)
    - [Sign Up Page Session](#sign-up-page-session)
-   - [Navigation Bar at home page](#navigation_bar_at_home_page)
+   - [Navigation Bar at home page](#navigation-bar_at-home_page)
 4. [Book and Book Detail Page](#book-and-book-detail-page)
    - [How to Make an Order](#how-to-make-an-order)
    - [How to View Cart](#how-to-view-cart)
