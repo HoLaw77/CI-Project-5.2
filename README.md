@@ -20,7 +20,7 @@
 3. [Home Page](#home-page)
    - [Sign In Page Session](#sign-in-page-session)
    - [Sign Up Page Session](#sign-up-page-session)
-   - [Navigation Bar at home page](#navigation-bar_at-home_page)
+   - [Navigation Bar at home page](#navigation-bar-at-home_page)
 4. [Book and Book Detail Page](#book-and-book-detail-page)
    - [How to Make an Order](#how-to-make-an-order)
    - [How to View Cart](#how-to-view-cart)
@@ -159,7 +159,7 @@
 
 ![navigation_bar](static/image/documentation/topnav.png)
 
-<h2>Book and Book Detail page </h2>
+<h2>Book and Book Detail Page </h2>
 
 <li>In the books page, it includes a search bar for user to search the book name, author and isbn information, beneath is a sort bar enable user to sort books according to alphabetical ascending or descending order</li>
 <li>User can click into the book title or book photo to view the book details in book detail pages.</li>
