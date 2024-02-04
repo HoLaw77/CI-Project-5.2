@@ -184,7 +184,7 @@ def checkout_success(request, order_number):
         'order': order,
         'order_number': order_number
     }
-    confirmation_email(order_number)
+    confirmation_email(order_number, request)
     
     return render(request, template, context)
 
