@@ -21,7 +21,7 @@
    - [Sign In Page Session](#sign-in-page-session)
    - [Sign Up Page Session](#sign-up-page-session)
    - [Navigation Bar At Home Page](#navigation-bar-at-home-page)
-4. [Book and Book Detail Page](#book-and-book-detail-page)
+4. [Book And Book Detail Page](#book-and-book-detail-page)
    - [How to Make an Order](#how-to-make-an-order)
    - [How to View Cart](#how-to-view-cart)
    - [How to Check Out and Make Payment](#how-to-check-out-and-make-payment)
@@ -29,7 +29,7 @@
 5. [Profile Page](#profile-page)
 6. [Development](#development)
    - [Original Flowchart And Wireframe](#original-flowchart-and-wireframe)
-   - [Agile Approach in Development](#agile-approach-in-development)
+   - [Agile Approach In Development](#agile-approach-in-development)
    - [User Story](#user-story)
    - [Future Development Possibility](#future-development-possibility)
 7. [Testing](#testing)
@@ -159,7 +159,7 @@
 
 ![navigation_bar](static/image/documentation/topnav.png)
 
-<h2>Book and Book Detail Page </h2>
+<h2>Book And Book Detail Page </h2>
 
 <li>In the books page, it includes a search bar for user to search the book name, author and isbn information, beneath is a sort bar enable user to sort books according to alphabetical ascending or descending order</li>
 <li>User can click into the book title or book photo to view the book details in book detail pages.</li>
@@ -331,7 +331,7 @@ to avoid the information becoming too crowd.</p>
 <li>I have also added a login and sign off function using django allauth functionality.</li>
 
 
-<h2>Agile approach in development </h2>
+<h2>Agile approach In development </h2>
 
 ![agile_example](static/image/documentation/agile_example.png)
 
