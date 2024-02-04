@@ -188,7 +188,7 @@ def checkout_success(request, order_number):
     
     return render(request, template, context)
 
-def confirmation_email(order_number):
+def confirmation_email(order_number, request):
     """Send confirmation email for customer after payment"""
     try:
         order = get_object_or_404(Order, order_number=order_number)
