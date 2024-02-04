@@ -20,7 +20,7 @@
 3. [Home Page](#home-page)
    - [Sign In Page Session](#sign-in-page-session)
    - [Sign Up Page Session](#sign-up-page-session)
-   - [Navigation Bar](#navigation_bar)
+   - [Navigation Bar at home page](#navigation_bar_at_home_page)
 4. [Book and Book Detail Page](#book-and-book-detail-page)
    - [How to Make an Order](#how-to-make-an-order)
    - [How to View Cart](#how-to-view-cart)
@@ -155,7 +155,7 @@
 
 <p>(It is a forward email from my friend who helps to test this functionality, for privacy consideration, the email address is blackened.)</p>
 
-<h3>Navigation Bar at home page</h3>
+<h2>Navigation Bar at home page</h2>
 
 ![navigation_bar](static/image/documentation/topnav.png)
 
