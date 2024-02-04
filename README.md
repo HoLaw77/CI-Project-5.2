@@ -86,7 +86,8 @@
 
 <h2>Home Page</h2>
 
-<li>The home page consists of three parts in structure: </li>
+<h3>The home page consists of three parts in structure: </h3>
+
 
 <ol>
 
