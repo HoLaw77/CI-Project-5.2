@@ -28,7 +28,7 @@
    - [How to Delete and Edit Order](#how-to-delete-and-edit-order)
 5. [Profile Page](#profile-page)
 6. [Development](#development)
-   - [Original Flowchart and Wireframe](#original-flowchart-and-wireframe)
+   - [Original Flowchart And Wireframe](#original-flowchart-and-wireframe)
    - [Agile Approach in Development](#agile-approach-in-development)
    - [User Story](#user-story)
    - [Future Development Possibility](#future-development-possibility)
@@ -297,7 +297,7 @@
 
 <h2>Development</h2>
 
-<h2> Original Flowchart and Wireframe</h2>
+<h2> Original Flowchart And Wireframe</h2>
 
 ![database_structure](static/image/documentation/database_structure.png)
 
