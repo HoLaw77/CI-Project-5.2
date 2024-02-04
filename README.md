@@ -32,10 +32,13 @@
    - [User Story](#user-story)
    - [Future Development Possibility](#future-development-possibility)
 7. [Testing](#testing)
-      - [Manual and Automated](#manual-and-automated)
-      - [HTML and CSS Validation](#html-and-css-validation)
-      - [Bugs and Their Solutions](#bugs-and-their-solutions)
-      - [Lighthouse Desktop and Mobile](#lighthouse-desktop-and-mobile)
+      - [Manual Testing](#manual-testing)
+      - [Automated Testing](#automated-automated)
+      - [HTML Validation](#html-validation)
+      - [CSS Validation](#css-validation)
+      - [Bugs](#bugs)
+      - [Lighthouse Desktop](#lighthouse-desktop)
+      - [Lighthouse Mobile](#lighthouse-mobile)
 8. [Deployment](#deployment)
 9. [Credit](#credit)
 
@@ -292,7 +295,8 @@
 ![social_media_link](static/image/documentation/social_media_link.png)
 
 <h2>Development</h2>
-<h3> Original Flowchart and Wireframe</h3>
+
+<h2> Original Flowchart and Wireframe</h2>
 
 ![database_structure](static/image/documentation/database_structure.png)
 
@@ -306,7 +310,7 @@ white background, with hover color-changing effect.</p>
 
 ![wireframe_home](static/image/documentation/initial_wireframe_home.png)
 
-<h3></h3>
+<h3>Wireframe Books</h3>
 
 <p>The book page wireframe have more modification because it is different for 
 screen size in word document compare to actual code styling with bootstrap, but
@@ -326,13 +330,13 @@ to avoid the information becoming too crowd.</p>
 <li>I have also added a login and sign off function using django allauth functionality.</li>
 
 
-<h3>Agile approach in development </h3>
+<h2>Agile approach in development </h2>
 
 ![agile_example](static/image/documentation/agile_example.png)
 
 <li>I have follow the agile approach in this project by setting up various issues to improve my project throughout the development process</li>
 
-<li>User Story</li>
+<h2>User Story</h2>
 
 <table>
 <thead>
