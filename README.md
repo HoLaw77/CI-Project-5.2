@@ -19,7 +19,7 @@
    - [Visual Design](#visual-design)
 4. [Home Page](#home-page)
    - [Sign In/Up Confirmation](#sign-inup-confirmation)
-   - [Navigation Bar](#navigation-bar)
+   - [Navigation Bar](#navigation_bar)
 5. [Book and Book Detail Page](#book-and-book-detail-page)
    - [How to Make an Order](#how-to-make-an-order)
    - [How to View Cart](#how-to-view-cart)
